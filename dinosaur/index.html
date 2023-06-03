@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <main class="live-table">
+        <div class="left-content">
+            <div class="full-loader">
+                <div class="loader"></div>
+            </div>
+            <section class="race-rating loading">
+                <div id="race-close"><span class="material-icons">close</span></div>
+                <div class="race-nav">
+                    <div id="race-prev"><span class="material-icons">navigate_before</span></div>
+                    <div id="race-next"><span class="material-icons">navigate_next</span></div>
+                </div>
+                <div class="race-top">
+                    <div class="race-countdown tick" data-did-init="UI.handleRaceCountDownInit"
+                        data-state="initialised">
+                        <div class="race-ending"><span data-trans="common__ending_in">Ending in</span></div>
+                        <div data-repeat="true" data-layout="horizontal fit"
+                            data-transform="preset(d, h, m, s) -> delay">
+                        </div>
+                    </div>
+                </div>
+                <div class="race-bot">
+                    <div class="race-leaderboard"><span><i></i><span
+                                data-trans="common__leaderboard">LEADERBOARD</span></span></div>
+                    <table>
+                        <tbody>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                    <div class="race-rules"><a href=""><span class="material-icons">info</span> <span
+                                data-trans="common__tournament_rules">Tournament Rules</span></a></div>
+                </div>
+            </section>
+            <section class="banners-wrapper loading"></section>
+        </div>
+        <div class="main-content">
+            <section class="game-container">
+                <div class="layer background animated" style="">
+                    <div class="bg"></div>
+                    <div class="bg"></div>
+                </div>
+                <div class="layer landscape animated" style="">
+                    <div class="bg"></div>
+                    <div class="bg"></div>
+                    <div class="bg"></div>
+                    <div class="bg"></div>
+                </div>
+                <div class="layer rocks animated" style="">
+                    <div class="rock"></div>
+                    <div class="rock"></div>
+                </div>
+                <div class="layer ground animated" style="">
+                    <div class="bg"></div>
+                    <div class="bg"></div>
+                    <div class="bg"></div>
+                </div>
+                <div class="dino" style="">
+                    <div class="anim-wrapper">
+                        <div class="dino-anim"></div>
+                    </div>
+                    <p class="current-num">0x</p>
+                </div>
+                <div class="crash-anim-container">
+                    <div class="crash-anim"></div>
+                </div>
+                <div class="result"></div>
+                <div class="bet-loader"><img src="assets/images/egg.png" alt="egg">
+                    <div class="loader-line">
+                        <div class="filled" style="width: 0%;"></div>
+                    </div>
+                    <p class="percent">0%</p>
+                    <p class="place-bet" data-trans="common__place_your_bets">Place Your Bets</p>
+                </div>
+                <div class="screen-loader"><img src="assets/images/egg.png" alt="egg"></div>
+                <div class="asteroid small" style="left: 393px;"></div>
+                <div class="asteroid big" style="top: 289px;"></div>
+            </section>
+            <section class="prev-numbers">
+                <div class="list-wrapper">
+                    <ul>
+                        <li class="low">1.00</li>
+                        <li class="low">1.19</li>
+                        <li class="middle">3.20</li>
+                        <li class="low">1.07</li>
+                        <li class="low">1.11</li>
+                        <li class="low">1.15</li>
+                        <li class="low">1.61</li>
+                        <li class="low">2.77</li>
+                        <li class="low">2.24</li>
+                        <li class="middle">3.66</li>
+                        <li class="middle">3.64</li>
+                        <li class="low">1.04</li>
+                        <li class="low">1.00</li>
+                        <li class="low">1.37</li>
+                        <li class="low">1.64</li>
+                        <li class="middle">3.05</li>
+                        <li class="middle">8.64</li>
+                        <li class="middle">3.04</li>
+                        <li class="low">1.29</li>
+                        <li class="high">44.34</li>
+                        <li class="middle">3.77</li>
+                        <li class="middle">5.06</li>
+                        <li class="low">2.40</li>
+                        <li class="low">1.06</li>
+                        <li class="low">2.19</li>
+                        <li class="high">17.28</li>
+                        <li class="low">1.05</li>
+                        <li class="middle">3.38</li>
+                        <li class="high">12.36</li>
+                        <li class="high">58.97</li>
+                        <li class="middle">3.93</li>
+                        <li class="middle">3.80</li>
+                        <li class="high">12.32</li>
+                        <li class="low">1.04</li>
+                        <li class="low">1.90</li>
+                        <li class="high">194.23</li>
+                        <li class="low">1.68</li>
+                        <li class="low">2.08</li>
+                        <li class="low">1.97</li>
+                        <li class="low">1.00</li>
+                        <li class="middle">6.70</li>
+                        <li class="low">1.40</li>
+                        <li class="low">2.49</li>
+                        <li class="middle">3.15</li>
+                        <li class="middle">3.63</li>
+                        <li class="low">1.08</li>
+                        <li class="low">1.63</li>
+                        <li class="low">1.42</li>
+                        <li class="low">1.05</li>
+                        <li class="middle">3.78</li>
+                        <li class="low">1.00</li>
+                        <li class="middle">3.24</li>
+                        <li class="high">13.34</li>
+                        <li class="middle">7.25</li>
+                        <li class="low">1.00</li>
+                        <li class="low">1.09</li>
+                        <li class="low">1.19</li>
+                        <li class="high">25.60</li>
+                        <li class="low">1.23</li>
+                        <li class="low">1.19</li>
+                        <li class="low">2.06</li>
+                        <li class="middle">4.43</li>
+                        <li class="low">2.45</li>
+                        <li class="low">1.60</li>
+                        <li class="low">1.96</li>
+                        <li class="middle">8.79</li>
+                        <li class="high">12.60</li>
+                        <li class="middle">4.42</li>
+                        <li class="middle">3.24</li>
+                        <li class="low">1.31</li>
+                        <li class="low">2.49</li>
+                        <li class="low">1.69</li>
+                        <li class="middle">4.99</li>
+                        <li class="middle">3.00</li>
+                        <li class="low">1.29</li>
+                        <li class="low">1.50</li>
+                        <li class="high">13.47</li>
+                        <li class="middle">8.64</li>
+                        <li class="low">2.02</li>
+                        <li class="low">1.43</li>
+                        <li class="middle">8.77</li>
+                        <li class="low">2.77</li>
+                        <li class="middle">4.12</li>
+                        <li class="middle">5.06</li>
+                        <li class="low">2.37</li>
+                        <li class="low">1.20</li>
+                        <li class="middle">3.75</li>
+                        <li class="low">1.01</li>
+                        <li class="middle">6.26</li>
+                        <li class="middle">3.31</li>
+                        <li class="low">2.16</li>
+                        <li class="low">2.68</li>
+                        <li class="low">1.29</li>
+                        <li class="low">2.18</li>
+                        <li class="low">1.36</li>
+                        <li class="low">2.45</li>
+                        <li class="low">1.00</li>
+                        <li class="high">13.77</li>
+                        <li class="low">2.08</li>
+                        <li class="middle">3.60</li>
+                    </ul>
+                </div>
+                <div id="popup-dino-spins" class="last-100">
+                    <div class="popup-content">
+                        <div class="popup-header">
+                            <div class="popup-title">
+                                <div>Game History</div>
+                                <div>Last 100 Number</div>
+                            </div>
+                            <div class="popup-close"><img src="static/images/prev-numbers-icon.svg" alt=""></div>
+                        </div>
+                        <div class="popup-body">
+                            <ul>
+                                <li class="low">1.00</li>
+                                <li class="low">1.19</li>
+                                <li class="middle">3.20</li>
+                                <li class="low">1.07</li>
+                                <li class="low">1.11</li>
+                                <li class="low">1.15</li>
+                                <li class="low">1.61</li>
+                                <li class="low">2.77</li>
+                                <li class="low">2.24</li>
+                                <li class="middle">3.66</li>
+                                <li class="middle">3.64</li>
+                                <li class="low">1.04</li>
+                                <li class="low">1.00</li>
+                                <li class="low">1.37</li>
+                                <li class="low">1.64</li>
+                                <li class="middle">3.05</li>
+                                <li class="middle">8.64</li>
+                                <li class="middle">3.04</li>
+                                <li class="low">1.29</li>
+                                <li class="high">44.34</li>
+                                <li class="middle">3.77</li>
+                                <li class="middle">5.06</li>
+                                <li class="low">2.40</li>
+                                <li class="low">1.06</li>
+                                <li class="low">2.19</li>
+                                <li class="high">17.28</li>
+                                <li class="low">1.05</li>
+                                <li class="middle">3.38</li>
+                                <li class="high">12.36</li>
+                                <li class="high">58.97</li>
+                                <li class="middle">3.93</li>
+                                <li class="middle">3.80</li>
+                                <li class="high">12.32</li>
+                                <li class="low">1.04</li>
+                                <li class="low">1.90</li>
+                                <li class="high">194.23</li>
+                                <li class="low">1.68</li>
+                                <li class="low">2.08</li>
+                                <li class="low">1.97</li>
+                                <li class="low">1.00</li>
+                                <li class="middle">6.70</li>
+                                <li class="low">1.40</li>
+                                <li class="low">2.49</li>
+                                <li class="middle">3.15</li>
+                                <li class="middle">3.63</li>
+                                <li class="low">1.08</li>
+                                <li class="low">1.63</li>
+                                <li class="low">1.42</li>
+                                <li class="low">1.05</li>
+                                <li class="middle">3.78</li>
+                                <li class="low">1.00</li>
+                                <li class="middle">3.24</li>
+                                <li class="high">13.34</li>
+                                <li class="middle">7.25</li>
+                                <li class="low">1.00</li>
+                                <li class="low">1.09</li>
+                                <li class="low">1.19</li>
+                                <li class="high">25.60</li>
+                                <li class="low">1.23</li>
+                                <li class="low">1.19</li>
+                                <li class="low">2.06</li>
+                                <li class="middle">4.43</li>
+                                <li class="low">2.45</li>
+                                <li class="low">1.60</li>
+                                <li class="low">1.96</li>
+                                <li class="middle">8.79</li>
+                                <li class="high">12.60</li>
+                                <li class="middle">4.42</li>
+                                <li class="middle">3.24</li>
+                                <li class="low">1.31</li>
+                                <li class="low">2.49</li>
+                                <li class="low">1.69</li>
+                                <li class="middle">4.99</li>
+                                <li class="middle">3.00</li>
+                                <li class="low">1.29</li>
+                                <li class="low">1.50</li>
+                                <li class="high">13.47</li>
+                                <li class="middle">8.64</li>
+                                <li class="low">2.02</li>
+                                <li class="low">1.43</li>
+                                <li class="middle">8.77</li>
+                                <li class="low">2.77</li>
+                                <li class="middle">4.12</li>
+                                <li class="middle">5.06</li>
+                                <li class="low">2.37</li>
+                                <li class="low">1.20</li>
+                                <li class="middle">3.75</li>
+                                <li class="low">1.01</li>
+                                <li class="middle">6.26</li>
+                                <li class="middle">3.31</li>
+                                <li class="low">2.16</li>
+                                <li class="low">2.68</li>
+                                <li class="low">1.29</li>
+                                <li class="low">2.18</li>
+                                <li class="low">1.36</li>
+                                <li class="low">2.45</li>
+                                <li class="low">1.00</li>
+                                <li class="high">13.77</li>
+                                <li class="low">2.08</li>
+                                <li class="middle">3.60</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="betslip with-prev-numbers">
+                <div id="bet-settings">
+                    <div class="bet-setting bet-setting-1" data-index="0">
+                        <div class="wrapper-left">
+                            <div>
+                                <div class="bet-fixed-amount-wrapper">
+                                    <ul>
+                                        <li amount="5" class="">5.00</li>
+                                        <li amount="10" class="">10.00</li>
+                                        <li amount="200" class="">200.00</li>
+                                        <li amount="0" class="">All in</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="betting-inputs-wrapper">
+                                <div class="bet-wrapper bet-wrapper-with-overlay">
+                                    <div class="checkbox-wrapper"><label class="chbx"><input type="checkbox"
+                                                name="auto-bet">
+                                            <span class="dot" data-trans="common__auto" data-trans-attr="data-text"
+                                                data-text="Auto">AUTO</span></label></div>
+                                    <div class="input-wrapper"><span class="title"
+                                            data-trans="common__bet_amount">Bet</span>
+                                        <div class="input-amount with-overlay">
+                                            <div class="input-btn minus"></div><input type="number" step="0.01"
+                                                name="bet-amount" value="5.00">
+                                            <div class="input-overlay">
+                                                <div class="input-val">5.00</div>
+                                                <div class="input-val-ending">EUR</div>
+                                            </div>
+                                            <div class="input-btn plus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cashout-amount collect-amount-wrapper">
+                                    <div class="checkbox-wrapper"><label class="chbx"><input type="checkbox"
+                                                name="auto-cashout"> <span class="dot" data-trans="common__auto"
+                                                data-trans-attr="data-text" data-text="Auto">AUTO</span></label></div>
+                                    <div class="input-wrapper"><span class="title"
+                                            data-trans="common__collect">Collect</span>
+                                        <div class="input-amount">
+                                            <div class="input-btn minus"></div><input data-on-focus="number" min="1.01"
+                                                step="0.01" inputmode="decimal" name="auto-cashout-coef"
+                                                data-trans="common__coef" data-trans-attr="placeholder"
+                                                placeholder="Coef" value="5x">
+                                            <div class="input-btn plus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="betting-inputs-toggle-container">
+                            <div class="betting-inputs-toggle-btn"></div>
+                        </div>
+                        <div class="wrapper-buttons">
+                            <div class="error-wrapper">
+                                <div class="error"></div>
+                            </div><button class="bet-button" style="display: none;">
+                                <div class="title-container"><span data-trans="common__bet">Bet</span>
+                                    <div class="btn-amount-wrapper"><b class="value"></b> <b class="currency"
+                                            dynamic-currency="">EUR</b></div>
+                                </div>
+                                <div class="bars-loader"></div>
+                            </button> <button class="cashout-button" disabled="disabled" style="display: none;"><span
+                                    data-trans="common__cashout">Cashout</span>
+                                <div class="button-cashout-wrapper"><span class="button-cashout-amount"></span> <span
+                                        class="button-cashout-currency"></span></div>
+                                <div class="bars-loader"></div>
+                            </button> <button class="btn next-round-bet" style=""><span
+                                    data-trans="common__next_round_bet">Next
+                                    Round Bet</span>
+                                <div class="btn-amount-wrapper"><b class="value"></b> <b class="currency"
+                                        dynamic-currency="">EUR</b></div>
+                            </button> <button class="btn cancel-next-round-bet" style="display: none;"><span
+                                    data-trans="common__cancel">Cancel</span></button>
+                        </div>
+                    </div>
+                    <div class="bet-setting bet-setting-2" data-index="1">
+                        <div class="wrapper-left">
+                            <div>
+                                <div class="bet-fixed-amount-wrapper">
+                                    <ul>
+                                        <li amount="5" class="">5.00</li>
+                                        <li amount="10" class="">10.00</li>
+                                        <li amount="200" class="">200.00</li>
+                                        <li amount="0" class="">All in</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="betting-inputs-wrapper">
+                                <div class="bet-wrapper bet-wrapper-with-overlay">
+                                    <div class="checkbox-wrapper"><label class="chbx"><input type="checkbox"
+                                                name="auto-bet">
+                                            <span class="dot" data-trans="common__auto" data-trans-attr="data-text"
+                                                data-text="Auto">AUTO</span></label></div>
+                                    <div class="input-wrapper"><span class="title"
+                                            data-trans="common__bet_amount">Bet</span>
+                                        <div class="input-amount with-overlay">
+                                            <div class="input-btn minus"></div><input type="number" step="0.01"
+                                                name="bet-amount" value="5.00">
+                                            <div class="input-overlay">
+                                                <div class="input-val">5.00</div>
+                                                <div class="input-val-ending">EUR</div>
+                                            </div>
+                                            <div class="input-btn plus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cashout-amount collect-amount-wrapper">
+                                    <div class="checkbox-wrapper"><label class="chbx"><input type="checkbox"
+                                                name="auto-cashout"> <span class="dot" data-trans="common__auto"
+                                                data-trans-attr="data-text" data-text="Auto">AUTO</span></label></div>
+                                    <div class="input-wrapper"><span class="title"
+                                            data-trans="common__collect">Collect</span>
+                                        <div class="input-amount">
+                                            <div class="input-btn minus"></div><input data-on-focus="number" min="1.01"
+                                                step="0.01" inputmode="decimal" name="auto-cashout-coef"
+                                                data-trans="common__coef" data-trans-attr="placeholder"
+                                                placeholder="Coef" value="5x">
+                                            <div class="input-btn plus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="betting-inputs-toggle-container">
+                            <div class="betting-inputs-toggle-btn"></div>
+                        </div>
+                        <div class="wrapper-buttons">
+                            <div class="error-wrapper">
+                                <div class="error"></div>
+                            </div><button class="bet-button" style="display: none;">
+                                <div class="title-container"><span data-trans="common__bet">Bet</span>
+                                    <div class="btn-amount-wrapper"><b class="value"></b> <b class="currency"
+                                            dynamic-currency="">EUR</b></div>
+                                </div>
+                                <div class="bars-loader"></div>
+                            </button> <button class="cashout-button" disabled="disabled" style="display: none;"><span
+                                    data-trans="common__cashout">Cashout</span>
+                                <div class="button-cashout-wrapper"><span class="button-cashout-amount"></span> <span
+                                        class="button-cashout-currency"></span></div>
+                                <div class="bars-loader"></div>
+                            </button> <button class="btn next-round-bet" style=""><span
+                                    data-trans="common__next_round_bet">Next
+                                    Round Bet</span>
+                                <div class="btn-amount-wrapper"><b class="value"></b> <b class="currency"
+                                        dynamic-currency="">EUR</b></div>
+                            </button> <button class="btn cancel-next-round-bet" style="display: none;"><span
+                                    data-trans="common__cancel">Cancel</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bet-info-wrapper">
+                <div class="bet-limits">
+                    <div class="limit-item">
+                        <div class="text"><span data-trans="common__min_bet">Min Bet</span>:</div>
+                        <div class="number bet-limit-min">0.20 <b>EUR</b></div>
+                    </div>
+                    <div class="limit-item">
+                        <div class="text"><span data-trans="common__max_bet">Max Bet</span>:</div>
+                        <div class="number bet-limit-max">1000.00 <b>EUR</b></div>
+                    </div>
+                    <div class="limit-item">
+                        <div class="text"><span data-trans="common__max_profit">Max Profit</span>:</div>
+                        <div class="number bet-limit-max-profit">10000.00 <b>EUR</b></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="right-content">
+            <section class="my-bets right-section right-section--active">
+                <div class="my-bets-header section-header">
+                    <div class="tab icon-title current-bets active" data-body="current-bets-body"><span
+                            class="section-title"><span data-trans="common__current_bets">Current Bets</span> <span
+                                id="current-bet-count" class="current-bets-count">67</span></span></div>
+                    <div class="tab icon-title my-bets" data-body="my-bets-body"><span class="section-title"><span
+                                data-trans="common__my_bets">My Bets</span></span></div>
+                    <div class="tab icon-title highroller-bets" data-body="highroller-bets-body"><span
+                            class="section-title"><span data-trans="common__highrollers">Highrollers</span></span></div>
+                </div>
+                <div class="section-body">
+                    <div class="tab-body current-bets-body" style="">
+                        <div class="bet-list current-bets-container">
+                            <div class="tb">
+                                <div class="tb-head">
+                                    <div data-trans="common__user">User</div>
+                                    <div class="num-th" data-trans="common__bet">Bet</div>
+                                    <div class="num-th" data-trans="common__coef">Coef</div>
+                                    <div class="num-th" data-trans="common__win">Win</div>
+                                    <div></div>
+                                </div>
+                                <div class="tb-body">
+
+                                    <div bid="fcee82c2-497f-4ca3-a05b-eaf519744a3b" bam="5" class="tb-row  ">
+                                        <div class="col-1" title="s***2">
+                                            <span>s***2</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="5.00">
+                                            <span>5.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="TND">
+                                            <span class="currency">&nbsp;TND</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="471a1461-831a-4b77-8bba-88b916c49d5a" bam="5" class="tb-row  ">
+                                        <div class="col-1" title="0***0">
+                                            <span>0***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="5.00">
+                                            <span>5.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="VES">
+                                            <span class="currency">&nbsp;VES</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="63e84b03-848c-47ce-a037-909864efc039" bam="5" class="tb-row  ">
+                                        <div class="col-1" title="0***8">
+                                            <span>0***8</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="5.00">
+                                            <span>5.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="VES">
+                                            <span class="currency">&nbsp;VES</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="40d4bfc7-db0d-4918-89f8-c9a3a8a21a8f" bam="5" class="tb-row  ">
+                                        <div class="col-1" title="0***0">
+                                            <span>0***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="5.00">
+                                            <span>5.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="VES">
+                                            <span class="currency">&nbsp;VES</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="4588a8e0-6c3f-4564-b8f8-d62757050a1a" bam="5" class="tb-row  ">
+                                        <div class="col-1" title="C***N">
+                                            <span>C***N</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="5.00">
+                                            <span>5.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="VES">
+                                            <span class="currency">&nbsp;VES</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="dc61b738-ade4-448c-9bd9-6c56fbe39238" bam="4.65" class="tb-row  ">
+                                        <div class="col-1" title="4***1">
+                                            <span>4***1</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="4.65">
+                                            <span>4.65</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="TND">
+                                            <span class="currency">&nbsp;TND</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="23e8702a-e25b-4f9f-84e1-3f588354f47a" bam="4" class="tb-row  ">
+                                        <div class="col-1" title="0***1">
+                                            <span>0***1</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="4.00">
+                                            <span>4.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="VES">
+                                            <span class="currency">&nbsp;VES</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="984f5386-6e45-44fa-ac98-f0fdfe8cfdf8" bam="4" class="tb-row  ">
+                                        <div class="col-1" title="0***8">
+                                            <span>0***8</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="4.00">
+                                            <span>4.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="VES">
+                                            <span class="currency">&nbsp;VES</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="8d52ac92-f934-4f53-a0d9-2d4dc4bf839f" bam="3" class="tb-row  ">
+                                        <div class="col-1" title="q***k">
+                                            <span>q***k</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="3.00">
+                                            <span>3.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="TND">
+                                            <span class="currency">&nbsp;TND</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="db141000-1c6c-426f-92ae-15dc534a1486" bam="3" class="tb-row  ">
+                                        <div class="col-1" title="p***9">
+                                            <span>p***9</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="3.00">
+                                            <span>3.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="BRL">
+                                            <span class="currency">&nbsp;BRL</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="b0235a7b-8081-4399-821d-7894533e55d5" bam="3" class="tb-row  ">
+                                        <div class="col-1" title="0***5">
+                                            <span>0***5</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="3.00">
+                                            <span>3.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="VES">
+                                            <span class="currency">&nbsp;VES</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="87c4cf91-9a54-4baf-930f-512248458d94" bam="3" class="tb-row  ">
+                                        <div class="col-1" title="0***2">
+                                            <span>0***2</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="3.00">
+                                            <span>3.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="VES">
+                                            <span class="currency">&nbsp;VES</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="90670d58-91fb-4d53-86b2-7753766e9420" bam="3" class="tb-row  ">
+                                        <div class="col-1" title="0***8">
+                                            <span>0***8</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="3.00">
+                                            <span>3.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="-">
+                                            -
+                                        </div>
+                                        <div class="col-4 num-td win-td " title="-">
+                                            -
+                                        </div>
+                                        <div style="col-5" title="VES">
+                                            <span class="currency">&nbsp;VES</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="live-chat right-section">
+                <div class="section-header chat-header">
+                    <div class="icon-title"><span class="material-icons">chat</span> <span class="section-title"
+                            data-trans="common__chat">Chat</span></div>
+                    <div class="exp-col"><img src="static/images/show-hide-chat.svg" alt=""></div>
+                </div>
+                <div class="section-body">
+                    <div class="chat-message-container">
+                        <ul class="chat-container">
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Maldita seaaaa 20 perdidasssssss coñooooo</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Ya basta maldita seaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Ya basta maldita seaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Maldita seaaaaa mi suerte</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Maldita seaaaaa mi suerte</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Lancen una maldita seaaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Lancen una maldita seaaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Que ya me quitaron todooooo maldita seaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Que ya me quitaron todooooo maldita seaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Maldita seaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Maldita seaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Malditossss hijossss de putaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Malditossss hijossss de putaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">0***1: </span>
+                                <span class="message">Maldita seaaaaaa</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">s***7: </span>
+                                <span class="message">me acabo de forrar</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">s***7: </span>
+                                <span class="message">2000</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">h***7: </span>
+                                <span class="message">ojoooo como se juega </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">h***7: </span>
+                                <span class="message">como se usa el colector </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">a***l: </span>
+                                <span class="message">0,80</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">k***_: </span>
+                                <span class="message">k chusta estav callendo todas mal</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chat-message">
+                        <form><textarea name="new-message" data-trans="common__type_message"
+                                data-trans-attr="placeholder" placeholder="Type message..." autocomplete="off"
+                                maxlength="60"></textarea> <button type="submit" class="send-message"><img
+                                    src="static/images/send-message.png" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script src="/main.js"></script>

@@ -1,0 +1,7 @@
+<svg id="vuesax_twotone_arrow-down" data-name="vuesax/twotone/arrow-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="arrow-down">
+    <path id="Vector" d="M0,6.07,6.07,0l6.07,6.07" transform="translate(5.93 3.5)" fill="none" stroke="#97a1c2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Vector-2" data-name="Vector" d="M0,16.83V0" transform="translate(12 3.67)" fill="none" stroke="#97a1c2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" opacity="0.4"/>
+    <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" opacity="0"/>
+  </g>
+</svg>

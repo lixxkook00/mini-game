@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3823" data-name="Rectangle 3823" width="13.982" height="21.89" fill="#97a1c2"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_3824" data-name="Rectangle 3824" width="11.489" height="14.483" fill="#97a1c2"/>
+    </clipPath>
+  </defs>
+  <g id="Group_14686" data-name="Group 14686" transform="translate(-183 -936)">
+    <g id="Group_14658" data-name="Group 14658" transform="translate(-595.064 21)">
+      <g id="Group_4613" data-name="Group 4613" transform="translate(783.064 916)" opacity="0.4">
+        <g id="Group_4612" data-name="Group 4612" clip-path="url(#clip-path)" style="isolation: isolate">
+          <path id="Path_4726" data-name="Path 4726" d="M5.868,2.319V1.008A1.067,1.067,0,0,1,6.983,0,1.067,1.067,0,0,1,8.1,1.008V9.5q-.556-.037-1.115-.037T5.868,9.5ZM2.934,5.506V2.319A1.067,1.067,0,0,1,4.049,1.31,1.067,1.067,0,0,1,5.164,2.319V9.557a16.222,16.222,0,0,0-2.23.4Zm11.032,7.279v2.782c0,3.486-3.133,6.322-6.983,6.322S0,19.053,0,15.567V5.506A1.067,1.067,0,0,1,1.115,4.5,1.067,1.067,0,0,1,2.23,5.506v4.647a9.777,9.777,0,0,1,3.638-.763A11.118,11.118,0,0,1,8.8,9.558V2.319a1.121,1.121,0,0,1,2.23,0V9.777a.323.323,0,0,0,.005.05c0,.067-.005.136-.005.206v3.152c-.124.5.364.945.352.628a.337.337,0,0,0,.352-.319V10.032A2.014,2.014,0,0,1,13.526,7.8a.485.485,0,0,1,.342.094.287.287,0,0,1,.1.229v4.569a.291.291,0,0,0,.017.092Z" transform="translate(0 0.001)" fill="#97a1c2"/>
+        </g>
+      </g>
+      <g id="Group_4615" data-name="Group 4615" transform="translate(785.557 923.543)">
+        <g id="Group_4614" data-name="Group 4614" clip-path="url(#clip-path-2)">
+          <path id="Path_4727" data-name="Path 4727" d="M11.473,5.028V.332a.3.3,0,0,0-.1-.236.5.5,0,0,0-.351-.1A2.07,2.07,0,0,0,9.181,2.3V5.853a.345.345,0,0,1-.362.328,6.674,6.674,0,0,0-5.185,2.39C2.98,9.383.476,12.473,0,13.186a7.642,7.642,0,0,0,4.3,1.3c3.957,0,7.176-2.914,7.176-6.5V5.127l.017-.005a.327.327,0,0,1-.017-.094" transform="translate(0 0)" fill="#97a1c2"/>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_8129" data-name="Rectangle 8129" width="24" height="24" transform="translate(183 936)" fill="none" opacity="0.24"/>
+  </g>
+</svg>
