@@ -1,58 +1,58 @@
 @font-face {
     font-family: roboto-regular;
-    src: url(./assets/fonts/Roboto-Regular.woff2) format("woff2"),url(./assets/fonts/Roboto-Regular.woff) format("woff"),url(./assets/fonts/Roboto-Regular.ttf) format("truetype")
+    src: url(../dinosaur/assets/fonts/Roboto-Regular.woff2) format("woff2"),url(../dinosaur/assets/fonts/Roboto-Regular.woff) format("woff"),url(../dinosaur/assets/fonts/Roboto-Regular.ttf) format("truetype")
 }
 
 @font-face {
     font-family: roboto-bold;
-    src: url(./assets/fonts/Roboto-Bold.woff2) format("woff2"),url(./assets/fonts/Roboto-Bold.woff) format("woff"),url(./assets/fonts/Roboto-Bold.ttf) format("truetype")
+    src: url(../dinosaur/assets/fonts/Roboto-Bold.woff2) format("woff2"),url(../dinosaur/assets/fonts/Roboto-Bold.woff) format("woff"),url(../dinosaur/assets/fonts/Roboto-Bold.ttf) format("truetype")
 }
 
 @font-face {
     font-family: roboto-black;
-    src: url(./assets/fonts/Roboto-Black.woff2) format("woff2"),url(./assets/fonts/Roboto-Black.woff) format("woff"),url(./assets/fonts/Roboto-Black.ttf) format("truetype")
+    src: url(../dinosaur/assets/fonts/Roboto-Black.woff2) format("woff2"),url(../dinosaur/assets/fonts/Roboto-Black.woff) format("woff"),url(../dinosaur/assets/fonts/Roboto-Black.ttf) format("truetype")
 }
 
 @font-face {
     font-family: roboto-light;
-    src: url(./assets/fonts/Roboto-Light.woff2) format("woff2"),url(./assets/fonts/Roboto-Light.woff) format("woff"),url(./assets/fonts/Roboto-Light.ttf) format("truetype")
+    src: url(../dinosaur/assets/fonts/Roboto-Light.woff2) format("woff2"),url(../dinosaur/assets/fonts/Roboto-Light.woff) format("woff"),url(../dinosaur/assets/fonts/Roboto-Light.ttf) format("truetype")
 }
 
 @font-face {
     font-family: roboto-medium;
-    src: url(./assets/fonts/Roboto-Medium.woff2) format("woff2"),url(./assets/fonts/Roboto-Medium.woff) format("woff"),url(./assets/fonts/Roboto-Medium.ttf) format("truetype")
+    src: url(../dinosaur/assets/fonts/Roboto-Medium.woff2) format("woff2"),url(../dinosaur/assets/fonts/Roboto-Medium.woff) format("woff"),url(../dinosaur/assets/fonts/Roboto-Medium.ttf) format("truetype")
 }
 
 @font-face {
     font-family: roboto-thin;
-    src: url(./assets/fonts/Roboto-Thin.woff2) format("woff2"),url(./assets/fonts/Roboto-Thin.woff) format("woff"),url(./assets/fonts/Roboto-Thin.ttf) format("truetype")
+    src: url(../dinosaur/assets/fonts/Roboto-Thin.woff2) format("woff2"),url(../dinosaur/assets/fonts/Roboto-Thin.woff) format("woff"),url(../dinosaur/assets/fonts/Roboto-Thin.ttf) format("truetype")
 }
 
 @font-face {
     font-family: alien-encounters;
-    src: url(./assets/fonts/Alien-Encounters-Regular.ttf) format("truetype")
+    src: url(../dinosaur/assets/fonts/Alien-Encounters-Regular.ttf) format("truetype")
 }
 
 @font-face {
     font-family: pixel;
-    src: url(./assets/fonts/pixel.woff2)
+    src: url(../dinosaur/assets/fonts/pixel.woff2)
 }
 
 @font-face {
     font-family: luckiest;
-    src: url(./assets/fonts/luckiestguy.woff2)
+    src: url(../dinosaur/assets/fonts/luckiestguy.woff2)
 }
 
 @font-face {
     font-family: material icons;
     font-weight: 400;
     font-style: normal;
-    src: url(./assets/fonts/MaterialIcons-Regular.woff) format("woff")
+    src: url(../dinosaur/assets/fonts/MaterialIcons-Regular.woff) format("woff")
 }
 
 @font-face {
     font-family: proxima nova semibold;
-    src: url(./assets/fonts/ProximaNova-Semibold.woff2) format("woff2"),url(./assets/fonts/ProximaNova-Semibold.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNova-Semibold.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNova-Semibold.woff) format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap
@@ -60,7 +60,7 @@
 
 @font-face {
     font-family: proximanovabold;
-    src: url(./assets/fonts/ProximaNova-Bold.woff2) format("woff2"),url(./assets/fonts/ProximaNova-Bold.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNova-Bold.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNova-Bold.woff) format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap
@@ -68,7 +68,7 @@
 
 @font-face {
     font-family: proximanovaboldit;
-    src: url(./assets/fonts/ProximaNova-BoldIt.woff2) format("woff2"),url(./assets/fonts/ProximaNova-BoldIt.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNova-BoldIt.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNova-BoldIt.woff) format("woff");
     font-weight: 700;
     font-style: italic;
     font-display: swap
@@ -76,7 +76,7 @@
 
 @font-face {
     font-family: proxima nova extrabld;
-    src: url(./assets/fonts/ProximaNova-Extrabld.woff2) format("woff2"),url(./assets/fonts/ProximaNova-Extrabld.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNova-Extrabld.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNova-Extrabld.woff) format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap
@@ -84,13 +84,13 @@
 
 @font-face {
     font-family: proxima nova black;
-    src: url(./assets/fonts/ProximaNova-Black.woff2) format("woff2"),url(./assets/fonts/ProximaNova-Black.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNova-Black.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNova-Black.woff) format("woff");
     font-weight: 900
 }
 
 @font-face {
     font-family: proxima nova extrabldit;
-    src: url(./assets/fonts/ProximaNova-ExtrabldIt.woff2) format("woff2"),url(./assets/fonts/ProximaNova-ExtrabldIt.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNova-ExtrabldIt.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNova-ExtrabldIt.woff) format("woff");
     font-weight: 700;
     font-style: italic;
     font-display: swap
@@ -98,7 +98,7 @@
 
 @font-face {
     font-family: proxima nova semiboldit;
-    src: url(./assets/fonts/ProximaNova-SemiboldIt.woff2) format("woff2"),url(./assets/fonts/ProximaNova-SemiboldIt.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNova-SemiboldIt.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNova-SemiboldIt.woff) format("woff");
     font-weight: 600;
     font-style: italic;
     font-display: swap
@@ -106,7 +106,7 @@
 
 @font-face {
     font-family: proxima nova thinit;
-    src: url(./assets/fonts/ProximaNova-ThinIt.woff2) format("woff2"),url(./assets/fonts/ProximaNova-ThinIt.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNova-ThinIt.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNova-ThinIt.woff) format("woff");
     font-weight: 100;
     font-style: italic;
     font-display: swap
@@ -114,7 +114,7 @@
 
 @font-face {
     font-family: proxima nova blackit;
-    src: url(./assets/fonts/ProximaNova-BlackIt.woff2) format("woff2"),url(./assets/fonts/ProximaNova-BlackIt.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNova-BlackIt.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNova-BlackIt.woff) format("woff");
     font-weight: 900;
     font-style: italic;
     font-display: swap
@@ -122,7 +122,7 @@
 
 @font-face {
     font-family: proxima nova thin;
-    src: url(./assets/fonts/ProximaNovaT-Thin.woff2) format("woff2"),url(./assets/fonts/ProximaNovaT-Thin.woff) format("woff");
+    src: url(../dinosaur/assets/fonts/ProximaNovaT-Thin.woff2) format("woff2"),url(../dinosaur/assets/fonts/ProximaNovaT-Thin.woff) format("woff");
     font-weight: 100;
     font-style: normal;
     font-display: swap
@@ -322,7 +322,7 @@ header .wrapper .main-content.with-back-button .back-to-home {
     align-items: center;
     width: 24px;
     height: 24px;
-    background-image: url(./assets/images/72fe0346c4bc57c84c59ecd88131baf1.png);
+    background-image: url(../dinosaur/assets/images/72fe0346c4bc57c84c59ecd88131baf1.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -369,7 +369,7 @@ header .wrapper .main-content #user-state .wallet-wrapper #active-wallet:before 
     position: relative;
     width: 24px;
     height: 24px;
-    background-image: url(./assets/images/312c0add893ce1a3aa777c685e0b102c.svg);
+    background-image: url(../dinosaur/assets/images/312c0add893ce1a3aa777c685e0b102c.svg);
     background-repeat: no-repeat;
     margin-left: 10px
 }
@@ -484,7 +484,7 @@ header .wrapper .main-content #user-state #racing-btn {
     width: 24px;
     height: 25px;
     margin-right: 15px;
-    background-image: url(./assets/images/004b6e227c325438e1dcec880c9c7e67.png)
+    background-image: url(../dinosaur/assets/images/004b6e227c325438e1dcec880c9c7e67.png)
 }
 
 header .wrapper .main-content .game-settings-wrapper {
@@ -778,14 +778,14 @@ aside #racing-btn {
     width: 24px;
     height: 25px;
     margin-right: 15px;
-    background-image: url(./assets/images/004b6e227c325438e1dcec880c9c7e67.png)
+    background-image: url(../dinosaur/assets/images/004b6e227c325438e1dcec880c9c7e67.png)
 }
 
 aside #gamerules-btn {
     width: 21px;
     height: 21px;
     margin-right: 15px;
-    background-image: url(./assets/images/23699be8f821c1bb8346622b8a116e8c.svg)
+    background-image: url(../dinosaur/assets/images/23699be8f821c1bb8346622b8a116e8c.svg)
 }
 
 aside .wrapper {
@@ -1630,7 +1630,7 @@ i.live-chat-icon {
     width: 24px;
     height: 25px;
     display: inline-block;
-    background-image: url(./assets/images/004b6e227c325438e1dcec880c9c7e67.png);
+    background-image: url(../dinosaur/assets/images/004b6e227c325438e1dcec880c9c7e67.png);
     margin-right: 2.5rem
 }
 
@@ -1790,7 +1790,7 @@ i.live-chat-icon {
     width: 100vw;
     z-index: 1005;
     display: none;
-    background-image: url(./assets/images/036a29174345c62f46849124e3390f08.png);
+    background-image: url(../dinosaur/assets/images/036a29174345c62f46849124e3390f08.png);
     background-size: cover;
     background-position: center
 }
@@ -2359,7 +2359,7 @@ i.live-chat-icon {
 .bet-wrapper .input-wrapper .input-amount .input-btn.minus:before {
     content: "";
     position: absolute;
-    background-image: url(./assets/images/3470f55b47f1e3aea2262fa73f4f5e49.svg);
+    background-image: url(../dinosaur/assets/images/3470f55b47f1e3aea2262fa73f4f5e49.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -2373,7 +2373,7 @@ i.live-chat-icon {
 .bet-wrapper .input-wrapper .input-amount .input-btn.plus:before {
     content: "";
     position: absolute;
-    background-image: url(./assets/images/bd27174048a2cdc8983213c2f26eeb5d.svg);
+    background-image: url(../dinosaur/assets/images/bd27174048a2cdc8983213c2f26eeb5d.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -3740,7 +3740,7 @@ main .info-icon {
 .bet-wrapper .input-wrapper .input-amount .input-btn.minus:before {
     content: "";
     position: absolute;
-    background-image: url(./assets/images/3470f55b47f1e3aea2262fa73f4f5e49.svg);
+    background-image: url(../dinosaur/assets/images/3470f55b47f1e3aea2262fa73f4f5e49.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -3754,7 +3754,7 @@ main .info-icon {
 .bet-wrapper .input-wrapper .input-amount .input-btn.plus:before {
     content: "";
     position: absolute;
-    background-image: url(./assets/images/bd27174048a2cdc8983213c2f26eeb5d.svg);
+    background-image: url(../dinosaur/assets/images/bd27174048a2cdc8983213c2f26eeb5d.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -3987,7 +3987,7 @@ main .info-icon {
 .collect-amount-wrapper .input-wrapper .input-amount .input-btn.minus:before {
     content: "";
     position: absolute;
-    background-image: url(./assets/images/312c0add893ce1a3aa777c685e0b102c.svg);
+    background-image: url(../dinosaur/assets/images/312c0add893ce1a3aa777c685e0b102c.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -4001,7 +4001,7 @@ main .info-icon {
 .collect-amount-wrapper .input-wrapper .input-amount .input-btn.plus:before {
     content: "";
     position: absolute;
-    background-image: url(./assets/images/7a955a056892ec0392a17ad78c3092e0.svg);
+    background-image: url(../dinosaur/assets/images/7a955a056892ec0392a17ad78c3092e0.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -4184,7 +4184,7 @@ main .main-content .game-container .layer.background {
 main .main-content .game-container .layer.background .bg {
     width: 100%;
     height: 100%;
-    background-image: url(./assets/images/5478c48755e3ba3a6a44587c78729099.jpg);
+    background-image: url(../dinosaur/assets/images/5478c48755e3ba3a6a44587c78729099.jpg);
     background-size: 100% 100%;
     flex-shrink: 0
 }
@@ -4215,7 +4215,7 @@ main .main-content .game-container .layer.landscape {
 main .main-content .game-container .layer.landscape .bg {
     width: var(--landscapeFrameWidth);
     height: 100%;
-    background-image: url(./assets/images/f18284bdf0ad803855cfaefde12d4987.png);
+    background-image: url(../dinosaur/assets/images/f18284bdf0ad803855cfaefde12d4987.png);
     background-size: 100% 100%;
     flex-shrink: 0
 }
@@ -4249,14 +4249,14 @@ main .main-content .game-container .layer.rocks .rock:first-child {
     margin-left: calc(var(--groundFrameWidth) * 2);
     width: 71px;
     height: 100px;
-    background-image: url(./assets/images/b4a596c34a602acf28878da2d19bd23e.png)
+    background-image: url(../dinosaur/assets/images/b4a596c34a602acf28878da2d19bd23e.png)
 }
 
 main .main-content .game-container .layer.rocks .rock:last-child {
     margin-left: calc(var(--groundFrameWidth) * 2 - 142px);
     width: 71px;
     height: 100px;
-    background-image: url(./assets/images/b4a596c34a602acf28878da2d19bd23e.png)
+    background-image: url(../dinosaur/assets/images/b4a596c34a602acf28878da2d19bd23e.png)
 }
 
 main .main-content .game-container .layer.rocks.animated {
@@ -4282,7 +4282,7 @@ main .main-content .game-container .layer.ground {
 main .main-content .game-container .layer.ground .bg {
     width: var(--groundFrameWidth);
     height: 100%;
-    background-image: url(./assets/images/52c46c893101f71ff0ddebc5bb8b98aa.png);
+    background-image: url(../dinosaur/assets/images/52c46c893101f71ff0ddebc5bb8b98aa.png);
     background-size: 100% 100%;
     flex-shrink: 0
 }
@@ -4315,7 +4315,7 @@ main .main-content .game-container .asteroid.small {
     top: 0;
     width: 719px;
     height: 514px;
-    background-image: url(./assets/images/c3ee9e49cce72d646ded82ce4549cfdd.png);
+    background-image: url(../dinosaur/assets/images/c3ee9e49cce72d646ded82ce4549cfdd.png);
     animation: smallAsteroidAnim 1500ms linear infinite;
     animation-fill-mode: forwards
 }
@@ -4331,7 +4331,7 @@ main .main-content .game-container .asteroid.big {
     left: 0;
     width: 134px;
     height: 97px;
-    background-image: url(./assets/images/64d3fe0e96a4a6d8d2074621aefb8c0f.png);
+    background-image: url(../dinosaur/assets/images/64d3fe0e96a4a6d8d2074621aefb8c0f.png);
     animation: bigAsteroidAnim 2s linear infinite;
     animation-fill-mode: forwards
 }
@@ -4363,7 +4363,7 @@ main .main-content .game-container .dino .anim-wrapper .dino-anim {
     width: calc(var(--dinoAnimFrameWidth) * 17);
     height: 100%;
     background-size: 100% 100%;
-    background-image: url(./assets/images/6738084e4f11bc2f4b7ed101904c1106.png);
+    background-image: url(../dinosaur/assets/images/6738084e4f11bc2f4b7ed101904c1106.png);
     animation: dinoAnim 680ms steps(17);
     animation-iteration-count: infinite;
     animation-fill-mode: forwards
@@ -4427,7 +4427,7 @@ main .main-content .game-container .crash-anim-container {
 main .main-content .game-container .crash-anim-container .crash-anim {
     width: calc(var(--crashAnimFrameWidth) * 58);
     height: var(--crashAnimFrameHeight);
-    background-image: url(./assets/images/90ddcb593be82c6eca8630e1e2854bd7.png);
+    background-image: url(../dinosaur/assets/images/90ddcb593be82c6eca8630e1e2854bd7.png);
     background-size: 100% 100%;
     transform: translateX(var(--crashAnimFrameWidth))
 }
@@ -4665,7 +4665,7 @@ main .main-content .prev-numbers .list-wrapper:after {
     background: unset;
     background-color: #1f2533;
     border-radius: 5px;
-    background-image: url(./assets/images/f91ec4f3545800d8012ca58ffc06e13a.svg);
+    background-image: url(../dinosaur/assets/images/f91ec4f3545800d8012ca58ffc06e13a.svg);
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -5024,14 +5024,14 @@ main .right-section.my-bets .section-body .my-bets-body .bet-list {
         height: 24px;
         background-color: #363e53;
         border-radius: var(--borderRadius);
-        background-image: url(./assets/images/7a955a056892ec0392a17ad78c3092e0.svg);
+        background-image: url(../dinosaur/assets/images/7a955a056892ec0392a17ad78c3092e0.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain
     }
 
     main .main-content .betslip #bet-settings .bet-setting .betting-inputs-toggle-container.closed .betting-inputs-toggle-btn:before {
-        background-image: url(./assets/images/312c0add893ce1a3aa777c685e0b102c.svg)
+        background-image: url(../dinosaur/assets/images/312c0add893ce1a3aa777c685e0b102c.svg)
     }
 }
 
@@ -5085,7 +5085,7 @@ main .right-section.my-bets .section-body .my-bets-body .bet-list {
     }
 
     main .main-content .game-container .layer.background .bg {
-        background-image: url(./assets/images/34cbc113342a66c02042cc943697ff7f.jpg)
+        background-image: url(../dinosaur/assets/images/34cbc113342a66c02042cc943697ff7f.jpg)
     }
 
     main .main-content .game-container .layer.landscape {
@@ -5093,7 +5093,7 @@ main .right-section.my-bets .section-body .my-bets-body .bet-list {
     }
 
     main .main-content .game-container .layer.landscape .bg {
-        background-image: url(./assets/images/29e642402f3ff9950ddcbf41ead6fb63.png)
+        background-image: url(../dinosaur/assets/images/29e642402f3ff9950ddcbf41ead6fb63.png)
     }
 
     main .main-content .game-container .layer.rocks {
@@ -5103,30 +5103,30 @@ main .right-section.my-bets .section-body .my-bets-body .bet-list {
     main .main-content .game-container .layer.rocks .rock:first-child {
         width: 36px;
         height: 50px;
-        background-image: url(./assets/images/87b7f4116cf72c49b301ef0d89e7841c.png)
+        background-image: url(../dinosaur/assets/images/87b7f4116cf72c49b301ef0d89e7841c.png)
     }
 
     main .main-content .game-container .layer.rocks .rock:last-child {
         margin-left: calc(var(--groundFrameWidth) * 2 - 70px);
         width: 36px;
         height: 50px;
-        background-image: url(./assets/images/87b7f4116cf72c49b301ef0d89e7841c.png)
+        background-image: url(../dinosaur/assets/images/87b7f4116cf72c49b301ef0d89e7841c.png)
     }
 
     main .main-content .game-container .layer.ground .bg {
-        background-image: url(./assets/images/6e8fcc8a5ac7e03ee05407e3e53edded.png)
+        background-image: url(../dinosaur/assets/images/6e8fcc8a5ac7e03ee05407e3e53edded.png)
     }
 
     main .main-content .game-container .asteroid.small {
         width: 379px;
         height: 250px;
-        background-image: url(./assets/images/70e74a6f47d69eec99040f0f6a9d2969.png)
+        background-image: url(../dinosaur/assets/images/70e74a6f47d69eec99040f0f6a9d2969.png)
     }
 
     main .main-content .game-container .asteroid.big {
         width: 69px;
         height: 50px;
-        background-image: url(./assets/images/fa3e120a35e9f5b3a8d86c68645e56cf.png)
+        background-image: url(../dinosaur/assets/images/fa3e120a35e9f5b3a8d86c68645e56cf.png)
     }
 
     main .main-content .game-container .dino {
@@ -5134,7 +5134,7 @@ main .right-section.my-bets .section-body .my-bets-body .bet-list {
     }
 
     main .main-content .game-container .dino .dino-anim {
-        background-image: url(./assets/images/300c23549c7c1ecb67fa797605c2062b.png)
+        background-image: url(../dinosaur/assets/images/300c23549c7c1ecb67fa797605c2062b.png)
     }
 
     main .main-content .game-container .dino p.current-num {
@@ -5168,7 +5168,7 @@ main .right-section.my-bets .section-body .my-bets-body .bet-list {
     }
 
     main .main-content .game-container .crash-anim {
-        background-image: url(./assets/images/a28c5b6b8e483f57e4abcbe5ccba9be0.png)
+        background-image: url(../dinosaur/assets/images/a28c5b6b8e483f57e4abcbe5ccba9be0.png)
     }
 
     main .main-content .game-container .result {
