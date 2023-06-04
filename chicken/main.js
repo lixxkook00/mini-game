@@ -52,3 +52,10 @@ const handleOpenPlate = (plate, index) => {
 
     console.log(openedPlate)
 }
+
+query('.bet-button').onclick = () => {
+    plateList.forEach((plate) => {
+        plate.className = ''
+        openedPlate.length = 0
+    })
+}
