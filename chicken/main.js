@@ -47,7 +47,9 @@ const handleOpenPlate = (plate, index) => {
         openedPlate.push(index)
     }else{
         plate.classList.add('bone')
-        randomPlatesLeft()
+        setTimeout(() => {
+            randomPlatesLeft()
+        }, 1500)
     }
 
     console.log(openedPlate)
