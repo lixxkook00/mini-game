@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game | Chicken</title>
+</head>
+
+<body>
+    <div class="main-content">
+        <section class="game-container">
+            <div class="game plates finished">
+                <div class="ul-grand-parent">
+                    <div class="ul-parent">
+                        <ul>
+                            <li n="1 animated"></li>
+                            <li n="2"></li>
+                            <li n="3"></li>
+                            <li n="4"></li>
+                            <li n="5"></li>
+                            <li n="6"></li>
+                            <li n="7"></li>
+                            <li n="8"></li>
+                            <li n="9"></li>
+                            <li n="10"></li>
+                            <li n="11"></li>
+                            <li n="12"></li>
+                            <li n="13"></li>
+                            <li n="14"></li>
+                            <li n="15"></li>
+                            <li n="16"></li>
+                            <li n="17"></li>
+                            <li n="18"></li>
+                            <li n="19"></li>
+                            <li n="20"></li>
+                            <li n="21"></li>
+                            <li n="22"></li>
+                            <li n="23"></li>
+                            <li n="24"></li>
+                            <li n="25"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="game-state-info">
+                <div class="count-container bone-count">
+                    <div class="counter">
+                        <div id="leftBoneCount" class="value">5</div>
+                        <div class="separator">x</div>
+                        <div class="icon"></div>
+                    </div>
+                </div>
+                <div class="count-container chicken-count">
+                    <div class="counter">
+                        <div id="leftChickenCount" class="value">20</div>
+                        <div class="separator">x</div>
+                        <div class="icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="web-profit-wrapper">
+                <div class="profit-container">
+                    <div class="profit-box next-profit">
+                        <div class="profit-wrapper"><span class="title" data-trans="chicken_nextWin">Next Tile
+                                Win</span>
+                            <div class="profit-content"><span class="profit-coef"></span> <span
+                                    class="profit-amount"></span></div>
+                        </div>
+                    </div>
+                    <div class="profit-box total-profit">
+                        <div class="profit-wrapper"><span class="title" data-trans="chicken__totalWin">Total Win</span>
+                            <div class="profit-content"><span class="profit-coef"></span> <span
+                                    class="profit-amount"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="betslip">
+            <div id="bet-settings">
+                <div class="bet-setting">
+                    <div class="wrapper-left">
+                        <div class="bet-wrapper bet-wrapper-with-overlay amount-box">
+                            <div class="input-wrapper">
+                                <div class="title-wrapper"><span class="title" data-trans="common__bet">Bet</span> <span
+                                        class="title custom-title" data-trans="custom__bet">Coin value</span></div>
+                                <div class="input-amount with-overlay"><input type="number" step="0.01"
+                                        name="bet-amount" placeholder="Amount" value="5.00">
+                                    <div class="input-overlay">
+                                        <div class="input-val">5.00</div>
+                                        <div class="input-val-ending">EUR</div>
+                                    </div>
+                                    <div class="input-btn minus"></div>
+                                    <div class="input-btn plus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bones-wrapper amount-box">
+                            <div class="input-wrapper"><span class="title" data-trans="chicken__bones">Bones</span>
+                                <div class="input-amount">
+                                    <div class="input-btn minus"></div><input type="number" step="1" name="bone-count"
+                                        placeholder="1-24" min="1" max="24" value="5">
+                                    <div class="input-btn plus"></div>
+                                </div>
+                            </div>
+                            <div id="initialMultiplierLabel" class="initial-multiplier-wrapper" style="display: flex;">
+                                <div class="label" data-trans="chicken__initial_multiplier">Initial multiplier</div>
+                                <div style="margin: 0 3px;">(</div>
+                                <div class="amount">1.23</div>
+                                <div style="margin: 0 3px;">x )</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-buttons">
+                        <div class="error-wrapper">
+                            <div class="error"></div>
+                        </div><button class="bet-button" style="">
+                            <div class="title-container"><span data-trans="common__bet">Bet</span>
+                                <div class="btn-amount-wrapper"><b class="value"></b> <b class="currency"
+                                        dynamic-currency="">EUR</b></div>
+                            </div>
+                            <div class="bars-loader"></div>
+                        </button> <button class="cashout-button" disabled="" style="display: none;"><span
+                                data-trans="common__cashout">Cashout</span>
+                            <div class="button-cashout-wrapper"><span class="button-cashout-amount"></span> <span
+                                    class="button-cashout-currency"></span></div>
+                            <div class="bars-loader"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="mobile-profit-wrapper">
+                <div class="profit-container">
+                    <div class="profit-box next-profit">
+                        <div class="profit-wrapper"><span class="title" data-trans="chicken_nextWin">Next Tile
+                                Win</span>
+                            <div class="profit-content"><span class="profit-coef"></span> <span
+                                    class="profit-amount"></span></div>
+                        </div>
+                    </div>
+                    <div class="profit-box total-profit">
+                        <div class="profit-wrapper"><span class="title" data-trans="chicken__totalWin">Total Win</span>
+                            <div class="profit-content"><span class="profit-coef"></span> <span
+                                    class="profit-amount"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bet-info-wrapper">
+            <div class="bet-limits">
+                <div class="limit-item">
+                    <div class="text"><span data-trans="common__min_bet">Min Bet</span>:</div>
+                    <div class="number bet-limit-min">0.20 <b>EUR</b></div>
+                </div>
+                <div class="limit-item">
+                    <div class="text"><span data-trans="common__max_bet">Max Bet</span>:</div>
+                    <div class="number bet-limit-max">1000.00 <b>EUR</b></div>
+                </div>
+                <div class="limit-item">
+                    <div class="text"><span data-trans="common__max_profit">Max Profit</span>:</div>
+                    <div class="number bet-limit-max-profit">10000.00 <b>EUR</b></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
