@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Rich</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row m-t-xl">
+            <div class="col-md-3">&nbsp;</div>
+            <div class="col-md-6 p-xl">
+                <div class="panel panel-success panel-login">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-8 pull-left">
+                                <img src="https://www.fundist.org/en/Logo/Image" style="max-width: 100%">
+                            </div>
+                            <div class="col-md-4 pull-right m-t">
+                                <select class="form-control select2-hidden-accessible"
+                                    onchange="changeLanguage($(this).val());" tabindex="-1" aria-hidden="true">
+                                    <option value="https://www.fundist.org/en/Logout" selected="">English</option>
+                                    <option value="https://www.fundist.org/ru/Logout">Русский</option>
+                                    <option value="https://www.fundist.org/tr/Logout">Türkçe</option>
+                                    <option value="https://www.fundist.org/de/Logout">Deutsch</option>
+                                    <option value="https://www.fundist.org/cn/Logout">简体中文</option>
+                                    <option value="https://www.fundist.org/ko/Logout">한국어</option>
+                                    <option value="https://www.fundist.org/ja/Logout">日本語</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                                    style="width: 138px;"><span class="selection"><span
+                                            class="select2-selection select2-selection--single" role="combobox"
+                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                            aria-labelledby="select2-htww-container"><span
+                                                class="select2-selection__rendered" id="select2-htww-container"
+                                                title="English">English</span><span class="select2-selection__arrow"
+                                                role="presentation"><b
+                                                    role="presentation"></b></span></span></span><span
+                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body middle-box animated fadeInDown">
+                        <form class="m-t" role="form" id="LoginForm" action="javascript:Login()" method="POST">
+                            <input type="hidden" name="forceLanguage" value="">
+                            <div class="form-group">
+                                <label for="Login">Login</label>
+                                <input type="text" name="Login" class="form-control" required="" placeholder=""
+                                    id="Login" maxlength="50">
+                                <input type="hidden" name="toIframe" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <input type="password" name="Password" class="form-control" required="" placeholder=""
+                                    id="Password" maxlength="32">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="LoginBtn"
+                                    class="btn btn-success block full-width m-b">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">&nbsp;</div>
+        </div>
+    </div>
+</body>
+
+</html>
