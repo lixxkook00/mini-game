@@ -6,10 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../dinosaur/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="header-wrapper"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-FKTDHSM"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+        <header>
+            <div class="wrapper">
+                <div class="main-content">
+                    <div id="game-name">Be Rich Dinosaur</div>
+                    <div id="user-state">
+                        <div id="freebet-wrapper">
+                            <div id="wallet-freebet" style="display: none;"><span
+                                    data-trans="common__freebets">FREEBETS</span> <i
+                                    class="freebet animate-flicker">0</i>
+                            </div>
+                        </div>
+                        <div class="wallet-wrapper single">
+                            <div id="active-wallet"><b>EUR</b> <span>690,000.00</span></div>
+                            <div id="user-wallets">
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-settings-wrapper">
+                        <div class="game-time-wrapper">
+                            <div id="game-time">00:10:59</div>
+                        </div>
+                        <div id="game-rules">
+                            <div id="game-audio-controllers" class="game-audio-controllers">
+                                <div id="background-audio-controller" class="game-audio-controller"><span
+                                        data-trans="common__sound_background_toggle">Background Music</span>
+                                    <div class="switch-button"><span class="inner-switch-button"></span><span
+                                            class="inner-switch-button-text"></span></div>
+                                </div>
+                                <div id="game-audio-controller" class="game-audio-controller"><span
+                                        data-trans="common__sound_game_toggle">Game Sounds</span>
+                                    <div class="switch-button"><span class="inner-switch-button"></span><span
+                                            class="inner-switch-button-text"></span></div>
+                                </div>
+                            </div>
+                            <div class="volume muted"><img class="sound-on" src="static/images/volume-on.svg" alt="">
+                                <img class="sound-off" src="static/images/volume-off.svg" alt="">
+                            </div>
+                            <div id="rules-wrapper"><a class="link"><img src="static/images/rules-icon.svg" alt="">
+                                    <span class="title" data-trans="common__game_rules">Game Rules</span></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="volume muted"><span class="material-icons sound-on">volume_up</span> <span
+                            class="material-icons sound-off">volume_off</span></div>
+                    <div class="menu-burger">
+                        <div class="bar bar--long"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="rgButton" class="responsible-gaming-icon"><img src="static/images/responsible-gaming-icon.svg" alt="">
+            <span data-trans="common__responsible_gaming">responsible gaming</span>
+        </div>
+    </div>
     <main class="live-table">
         <div class="left-content">
             <div class="full-loader">
@@ -85,14 +145,14 @@
                     <div class="crash-anim"></div>
                 </div>
                 <div class="result"></div>
-                <div class="bet-loader"><img src="../dinosaur/assets/images/egg.png" alt="egg">
+                <div class="bet-loader"><img src="assets/images/egg.png" alt="egg">
                     <div class="loader-line">
                         <div class="filled" style="width: 0%;"></div>
                     </div>
                     <p class="percent">0%</p>
                     <p class="place-bet" data-trans="common__place_your_bets">Place Your Bets</p>
                 </div>
-                <div class="screen-loader"><img src="../dinosaur/assets/images/egg.png" alt="egg"></div>
+                <div class="screen-loader"><img src="assets/images/egg.png" alt="egg"></div>
                 <div class="asteroid small" style="left: 393px;"></div>
                 <div class="asteroid big" style="top: 289px;"></div>
             </section>
@@ -855,4 +915,4 @@
 
 </html>
 
-<script src="../dinosaur/main.js"></script>
+<script src="main.js"></script>

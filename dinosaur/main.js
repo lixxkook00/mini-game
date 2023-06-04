@@ -11,6 +11,8 @@ const bigRockContainer = query('.crash-anim')
 
 const dino = query('.dino')
 
+const result = query('.result')
+
 const BG_LIST = [background, landscape, rocks, ground]
 
 
@@ -21,6 +23,14 @@ const hidden = (element) => {
 
 const show = (element) => {
     element.style.opacity = 1
+}
+
+const animated = (element) => {
+    element.classList.add('animated')
+}
+
+const clearAnimated = (element) => {
+    element.classList.remove('animated')
 }
 
 const fakeLoading = (loadingFilled, loadingText, callback = null) => {
@@ -72,13 +82,24 @@ const endGame = () => {
     handleBackGround('STOP')
 
     bigRockContainer.addEventListener("animationend", () => {
-        waitingBet()
+        // show result
+        result.innerText = `${score.final}x`
+        animated(result)
 
-        fakeLoading(
-            query('.bet-loader .loader-line .filled'),
-            query('.bet-loader .percent'),
-            // reStartDemo
-        )
+        // reloading screen
+        result.addEventListener("animationend", () => {
+            setTimeout(() => {
+                clearAnimated(result)
+                waitingBet()
+                fakeLoading(
+                    query('.bet-loader .loader-line .filled'),
+                    query('.bet-loader .percent'),
+                    // reStartDemo
+                )
+            }, 2000)
+        })
+
+
     });
 }
 
