@@ -6,168 +6,1099 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Game | Chicken</title>
+    <link rel="stylesheet" href="../chicken/style.css">
 </head>
 
 <body>
-    <div class="main-content">
-        <section class="game-container">
-            <div class="game plates finished">
-                <div class="ul-grand-parent">
-                    <div class="ul-parent">
-                        <ul>
-                            <li n="1 animated"></li>
-                            <li n="2"></li>
-                            <li n="3"></li>
-                            <li n="4"></li>
-                            <li n="5"></li>
-                            <li n="6"></li>
-                            <li n="7"></li>
-                            <li n="8"></li>
-                            <li n="9"></li>
-                            <li n="10"></li>
-                            <li n="11"></li>
-                            <li n="12"></li>
-                            <li n="13"></li>
-                            <li n="14"></li>
-                            <li n="15"></li>
-                            <li n="16"></li>
-                            <li n="17"></li>
-                            <li n="18"></li>
-                            <li n="19"></li>
-                            <li n="20"></li>
-                            <li n="21"></li>
-                            <li n="22"></li>
-                            <li n="23"></li>
-                            <li n="24"></li>
-                            <li n="25"></li>
+    <main>
+        <div class="left-content">
+            <div class="full-loader">
+                <div class="loader"></div>
+            </div>
+            <section class="race-rating loading">
+                <div id="race-close"><span class="material-icons">close</span></div>
+                <div class="race-nav">
+                    <div id="race-prev"><span class="material-icons">navigate_before</span></div>
+                    <div id="race-next"><span class="material-icons">navigate_next</span></div>
+                </div>
+                <div class="race-top">
+                    <div class="race-countdown tick" data-did-init="UI.handleRaceCountDownInit"
+                        data-state="initialised">
+                        <div class="race-ending"><span data-trans="common__ending_in">Ending in</span></div>
+                        <div data-repeat="true" data-layout="horizontal fit"
+                            data-transform="preset(d, h, m, s) -> delay">
+                        </div>
+                    </div>
+                </div>
+                <div class="race-bot">
+                    <div class="race-leaderboard"><span><i></i><span
+                                data-trans="common__leaderboard">LEADERBOARD</span></span></div>
+                    <table>
+                        <tbody>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                    <div class="race-rules"><a href=""><span class="material-icons">info</span> <span
+                                data-trans="common__tournament_rules">Tournament Rules</span></a></div>
+                </div>
+            </section>
+            <section class="banners-wrapper loading"></section>
+        </div>
+        <div class="main-content">
+            <section class="game-container">
+                <div class="game plates finished">
+                    <div class="ul-grand-parent">
+                        <div class="ul-parent">
+                            <ul>
+                                <li n="1"></li>
+                                <li n="2"></li>
+                                <li n="3"></li>
+                                <li n="4"></li>
+                                <li n="5"></li>
+                                <li n="6"></li>
+                                <li n="7"></li>
+                                <li n="8"></li>
+                                <li n="9"></li>
+                                <li n="10"></li>
+                                <li n="11"></li>
+                                <li n="12"></li>
+                                <li n="13"></li>
+                                <li n="14"></li>
+                                <li n="15"></li>
+                                <li n="16"></li>
+                                <li n="17"></li>
+                                <li n="18"></li>
+                                <li n="19"></li>
+                                <li n="20"></li>
+                                <li n="21"></li>
+                                <li n="22"></li>
+                                <li n="23"></li>
+                                <li n="24"></li>
+                                <li n="25"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-state-info">
+                    <div class="count-container bone-count">
+                        <div class="counter">
+                            <div id="leftBoneCount" class="value">5</div>
+                            <div class="separator">x</div>
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                    <div class="count-container chicken-count">
+                        <div class="counter">
+                            <div id="leftChickenCount" class="value">20</div>
+                            <div class="separator">x</div>
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="web-profit-wrapper">
+                    <div class="profit-container">
+                        <div class="profit-box next-profit">
+                            <div class="profit-wrapper"><span class="title" data-trans="chicken_nextWin">Next Tile
+                                    Win</span>
+                                <div class="profit-content"><span class="profit-coef"></span> <span
+                                        class="profit-amount"></span></div>
+                            </div>
+                        </div>
+                        <div class="profit-box total-profit">
+                            <div class="profit-wrapper"><span class="title" data-trans="chicken__totalWin">Total
+                                    Win</span>
+                                <div class="profit-content"><span class="profit-coef"></span> <span
+                                        class="profit-amount"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="betslip">
+                <div id="bet-settings">
+                    <div class="bet-setting">
+                        <div class="wrapper-left">
+                            <div class="bet-wrapper bet-wrapper-with-overlay amount-box">
+                                <div class="input-wrapper">
+                                    <div class="title-wrapper"><span class="title" data-trans="common__bet">Bet</span>
+                                        <span class="title custom-title" data-trans="custom__bet">Coin value</span>
+                                    </div>
+                                    <div class="input-amount with-overlay"><input type="number" step="0.01"
+                                            name="bet-amount" placeholder="Amount" value="5.00">
+                                        <div class="input-overlay">
+                                            <div class="input-val">5.00</div>
+                                            <div class="input-val-ending">EUR</div>
+                                        </div>
+                                        <div class="input-btn minus"></div>
+                                        <div class="input-btn plus"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bones-wrapper amount-box">
+                                <div class="input-wrapper"><span class="title" data-trans="chicken__bones">Bones</span>
+                                    <div class="input-amount">
+                                        <div class="input-btn minus"></div><input type="number" step="1"
+                                            name="bone-count" placeholder="1-24" min="1" max="24" value="5">
+                                        <div class="input-btn plus"></div>
+                                    </div>
+                                </div>
+                                <div id="initialMultiplierLabel" class="initial-multiplier-wrapper"
+                                    style="display: flex;">
+                                    <div class="label" data-trans="chicken__initial_multiplier">Initial multiplier</div>
+                                    <div style="margin: 0 3px;">(</div>
+                                    <div class="amount">1.23</div>
+                                    <div style="margin: 0 3px;">x )</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper-buttons">
+                            <div class="error-wrapper">
+                                <div class="error"></div>
+                            </div><button class="bet-button" style="">
+                                <div class="title-container"><span data-trans="common__bet">Bet</span>
+                                    <div class="btn-amount-wrapper"><b class="value"></b> <b class="currency"
+                                            dynamic-currency="">EUR</b></div>
+                                </div>
+                                <div class="bars-loader"></div>
+                            </button> <button class="cashout-button" disabled="" style="display: none;"><span
+                                    data-trans="common__cashout">Cashout</span>
+                                <div class="button-cashout-wrapper"><span class="button-cashout-amount"></span> <span
+                                        class="button-cashout-currency"></span></div>
+                                <div class="bars-loader"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="mobile-profit-wrapper">
+                    <div class="profit-container">
+                        <div class="profit-box next-profit">
+                            <div class="profit-wrapper"><span class="title" data-trans="chicken_nextWin">Next Tile
+                                    Win</span>
+                                <div class="profit-content"><span class="profit-coef"></span> <span
+                                        class="profit-amount"></span></div>
+                            </div>
+                        </div>
+                        <div class="profit-box total-profit">
+                            <div class="profit-wrapper"><span class="title" data-trans="chicken__totalWin">Total
+                                    Win</span>
+                                <div class="profit-content"><span class="profit-coef"></span> <span
+                                        class="profit-amount"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bet-info-wrapper">
+                <div class="bet-limits">
+                    <div class="limit-item">
+                        <div class="text"><span data-trans="common__min_bet">Min Bet</span>:</div>
+                        <div class="number bet-limit-min">0.20 <b>EUR</b></div>
+                    </div>
+                    <div class="limit-item">
+                        <div class="text"><span data-trans="common__max_bet">Max Bet</span>:</div>
+                        <div class="number bet-limit-max">1000.00 <b>EUR</b></div>
+                    </div>
+                    <div class="limit-item">
+                        <div class="text"><span data-trans="common__max_profit">Max Profit</span>:</div>
+                        <div class="number bet-limit-max-profit">10000.00 <b>EUR</b></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="right-content">
+            <section class="my-bets right-section right-section--active">
+                <div class="my-bets-header section-header">
+                    <div class="tab icon-title current-bets" data-body="current-bets-body"><span
+                            class="section-title"><span data-trans="common__current_bets">Current Bets</span> <span
+                                id="current-bet-count" class="current-bets-count"></span></span></div>
+                    <div class="tab icon-title my-bets active" data-body="my-bets-body"><span
+                            class="section-title"><span data-trans="common__my_bets">My Bets</span></span></div>
+                    <div class="tab icon-title highroller-bets" data-body="highroller-bets-body"><span
+                            class="section-title"><span data-trans="common__highrollers">Highrollers</span></span></div>
+                </div>
+                <div class="section-body">
+                    <div class="tab-body current-bets-body" style="display: none;">
+                        <div class="bet-list current-bets-container">
+                            <div class="tb">
+                                <div class="tb-head">
+                                    <div data-trans="common__user">User</div>
+                                    <div class="num-th" data-trans="common__bet">Bet</div>
+                                    <div class="num-th" data-trans="common__coef">Coef</div>
+                                    <div class="num-th" data-trans="common__win">Win</div>
+                                    <div></div>
+                                </div>
+                                <div class="tb-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-body my-bets-body" style=""><a id="my-bets-history">
+                            <div class="bet-history-icon"><img src="./static/images/bet-history.png" alt=""></div>
+                            <div data-trans="common__my_bets_history">My Bets History</div>
+                        </a>
+                        <div class="bet-list my-bets-container">
+                            <div class="tb">
+                                <div class="tb-head">
+                                    <div data-trans="common__time">Time</div>
+                                    <div class="num-th" data-trans="common__bet">Bet</div>
+                                    <div class="num-th" data-trans="common__coef">Coef</div>
+                                    <div class="num-th" data-trans="common__win">Win</div>
+                                    <div class="num-th" data-trans="common__curr">Currency</div>
+                                </div>
+                                <div class="tb-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-body highroller-bets-body" style="display: none;">
+                        <div class="bet-list highroller-bets-container">
+                            <div class="tb">
+                                <div class="tb-head">
+                                    <div data-trans="common__user">User</div>
+                                    <div class="num-th" data-trans="common__bet">Bet</div>
+                                    <div class="num-th" data-trans="common__coef">Coef</div>
+                                    <div class="num-th" data-trans="common__win">Win</div>
+                                    <div></div>
+                                </div>
+                                <div class="tb-body">
+                                    <div bid="a49b75db-6173-4c12-b8a0-30eb44cc9c5e" bam="50" class="tb-row win ">
+                                        <div class="col-1" title="h***r">
+                                            <span>h***r</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="50.00">
+                                            <span>50.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="127.31">
+                                            <span class="coef">127.31</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="6365.50">
+                                            <span class="won-amount">6365.50</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="2277888c-9bb2-4217-9ebf-4f838383ae05" bam="900" class="tb-row win ">
+                                        <div class="col-1" title="l***6">
+                                            <span>l***6</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="900.00">
+                                            <span>900.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="6.13">
+                                            <span class="coef">6.13</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="5525.07">
+                                            <span class="won-amount">5525.07</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="19c06ca7-c379-488c-830b-714b15c7912b" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="r***4">
+                                            <span>r***4</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="10.35">
+                                            <span class="coef">10.35</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="5175.00">
+                                            <span class="won-amount">5175.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="d9bbaf11-3b8f-45fc-a43c-298233b3dee3" bam="1000" class="tb-row win ">
+                                        <div class="col-1" title="l***6">
+                                            <span>l***6</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="1000.00">
+                                            <span>1000.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="4.52">
+                                            <span class="coef">4.52</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="4523.45">
+                                            <span class="won-amount">4523.45</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="c900865b-566c-493b-9402-3f3a63e27538" bam="300" class="tb-row win ">
+                                        <div class="col-1" title="r***4">
+                                            <span>r***4</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="300.00">
+                                            <span>300.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="13.80">
+                                            <span class="coef">13.80</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="4140.00">
+                                            <span class="won-amount">4140.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="857e480c-0bf9-4bed-8991-8457fd33d733" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="w***1">
+                                            <span>w***1</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="8.25">
+                                            <span class="coef">8.25</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="4125.00">
+                                            <span class="won-amount">4125.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="65018655-4608-4516-91b9-98d23558f230" bam="100" class="tb-row win ">
+                                        <div class="col-1" title="r***4">
+                                            <span>r***4</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="100.00">
+                                            <span>100.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="40.66">
+                                            <span class="coef">40.66</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="4066.07">
+                                            <span class="won-amount">4066.07</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="efd9bfff-8c03-42a3-8ea3-a24f671e3384" bam="1000" class="tb-row win ">
+                                        <div class="col-1" title="l***6">
+                                            <span>l***6</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="1000.00">
+                                            <span>1000.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="3.39">
+                                            <span class="coef">3.39</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="3392.58">
+                                            <span class="won-amount">3392.58</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="058ed437-c510-4783-8d30-2e6a45171b6e" bam="400" class="tb-row win ">
+                                        <div class="col-1" title="r***4">
+                                            <span>r***4</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="400.00">
+                                            <span>400.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="7.96">
+                                            <span class="coef">7.96</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="3184.61">
+                                            <span class="won-amount">3184.61</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="501098a2-dd4b-4312-8587-f768366e81dd" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="j***z">
+                                            <span>j***z</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="6.25">
+                                            <span class="coef">6.25</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="3127.74">
+                                            <span class="won-amount">3127.74</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="91abe090-636f-462b-9211-06fd4becb01d" bam="900" class="tb-row win ">
+                                        <div class="col-1" title="l***6">
+                                            <span>l***6</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="900.00">
+                                            <span>900.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="3.39">
+                                            <span class="coef">3.39</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="3053.33">
+                                            <span class="won-amount">3053.33</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="167f43bc-150b-4599-87b1-47c70ff3b541" bam="900" class="tb-row win ">
+                                        <div class="col-1" title="l***6">
+                                            <span>l***6</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="900.00">
+                                            <span>900.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="3.39">
+                                            <span class="coef">3.39</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="3053.33">
+                                            <span class="won-amount">3053.33</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="a79b9b3e-e159-40dc-a9cd-b53c2defaed7" bam="200" class="tb-row win ">
+                                        <div class="col-1" title="r***4">
+                                            <span>r***4</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="200.00">
+                                            <span>200.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="13.80">
+                                            <span class="coef">13.80</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2760.00">
+                                            <span class="won-amount">2760.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="735d7da5-7820-488b-87a0-db0a0da8130d" bam="800" class="tb-row win ">
+                                        <div class="col-1" title="l***6">
+                                            <span>l***6</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="800.00">
+                                            <span>800.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="3.39">
+                                            <span class="coef">3.39</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2714.07">
+                                            <span class="won-amount">2714.07</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="c252dd41-c4cd-48fc-9447-ed4303815584" bam="100" class="tb-row win ">
+                                        <div class="col-1" title="r***4">
+                                            <span>r***4</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="100.00">
+                                            <span>100.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="27.10">
+                                            <span class="coef">27.10</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2710.71">
+                                            <span class="won-amount">2710.71</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="2c9cfe30-9c56-48f4-a5da-6220a2b84228" bam="100" class="tb-row win ">
+                                        <div class="col-1" title="r***4">
+                                            <span>r***4</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="100.00">
+                                            <span>100.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="27.10">
+                                            <span class="coef">27.10</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2710.71">
+                                            <span class="won-amount">2710.71</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="ffe3691b-c56f-4bc4-9733-2ac2f7047c63" bam="100" class="tb-row win ">
+                                        <div class="col-1" title="r***4">
+                                            <span>r***4</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="100.00">
+                                            <span>100.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="27.10">
+                                            <span class="coef">27.10</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2710.71">
+                                            <span class="won-amount">2710.71</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="34ad8803-4bc7-4d36-b73f-08ea11d54e4d" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="j***z">
+                                            <span>j***z</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="5.00">
+                                            <span class="coef">5.00</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2502.19">
+                                            <span class="won-amount">2502.19</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="bdf1f522-f850-425c-b2f3-af8458ad3bec" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="r***4">
+                                            <span>r***4</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="5.00">
+                                            <span class="coef">5.00</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2502.19">
+                                            <span class="won-amount">2502.19</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="fa150c20-cb5b-4b81-a6f0-3cb2b2c9baf0" bam="1000" class="tb-row win ">
+                                        <div class="col-1" title="w***1">
+                                            <span>w***1</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="1000.00">
+                                            <span>1000.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="2.47">
+                                            <span class="coef">2.47</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2475.00">
+                                            <span class="won-amount">2475.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="f272e310-7852-4fac-a57b-af7903e9bec0" bam="1000" class="tb-row win ">
+                                        <div class="col-1" title="f***3">
+                                            <span>f***3</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="1000.00">
+                                            <span>1000.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="2.00">
+                                            <span class="coef">2.00</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2000.00">
+                                            <span class="won-amount">2000.00</span>
+                                        </div>
+                                        <div style="col-5" title="USD">
+                                            <span class="currency">&nbsp;USD</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="640943b3-cf34-4d3a-a6bc-625457ca9bdd" bam="1000" class="tb-row win ">
+                                        <div class="col-1" title="f***3">
+                                            <span>f***3</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="1000.00">
+                                            <span>1000.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="2.00">
+                                            <span class="coef">2.00</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="2000.00">
+                                            <span class="won-amount">2000.00</span>
+                                        </div>
+                                        <div style="col-5" title="USD">
+                                            <span class="currency">&nbsp;USD</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="84bc42db-b4a6-4afa-ac0c-ef24d81986bb" bam="600" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="600.00">
+                                            <span>600.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="3.05">
+                                            <span class="coef">3.05</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="1830.00">
+                                            <span class="won-amount">1830.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="f534d63e-5cd9-4628-85c0-12061e0adddf" bam="600" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="600.00">
+                                            <span>600.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="2.14">
+                                            <span class="coef">2.14</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="1284.00">
+                                            <span class="won-amount">1284.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="84dcbfc6-8776-4b66-9080-9627ef1a864e" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="2.48">
+                                            <span class="coef">2.48</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="1240.00">
+                                            <span class="won-amount">1240.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="148a1293-762e-4818-b933-e2109b75dd1b" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="2.48">
+                                            <span class="coef">2.48</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="1240.00">
+                                            <span class="won-amount">1240.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="57bbafaa-908a-4857-972c-454bc85d8dd6" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="2.20">
+                                            <span class="coef">2.20</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="1100.00">
+                                            <span class="won-amount">1100.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="f8ec3183-a95d-40a6-8953-3654fcc79413" bam="600" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="600.00">
+                                            <span>600.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="1.63">
+                                            <span class="coef">1.63</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="978.00">
+                                            <span class="won-amount">978.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="65f4472d-1fa1-4415-a9d0-45ee7528369f" bam="887.78" class="tb-row win ">
+                                        <div class="col-1" title="f***a">
+                                            <span>f***a</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="887.78">
+                                            <span>887.78</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="1.08">
+                                            <span class="coef">1.08</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="958.80">
+                                            <span class="won-amount">958.80</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="b5bd77d1-fc03-46d7-af74-2804609074b1" bam="1000" class="tb-row win ">
+                                        <div class="col-1" title="f***3">
+                                            <span>f***3</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="1000.00">
+                                            <span>1000.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="1.03">
+                                            <span class="coef">1.03</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="1030.00">
+                                            <span class="won-amount">1030.00</span>
+                                        </div>
+                                        <div style="col-5" title="USD">
+                                            <span class="currency">&nbsp;USD</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="3985f02d-4df2-4e8f-99fe-41095cda7f7b" bam="1000" class="tb-row win ">
+                                        <div class="col-1" title="g***0">
+                                            <span>g***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="1000.00">
+                                            <span>1000.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="1.35">
+                                            <span class="coef">1.35</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="1350.00">
+                                            <span class="won-amount">1350.00</span>
+                                        </div>
+                                        <div style="col-5" title="CAD">
+                                            <span class="currency">&nbsp;CAD</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="7889e7ce-ddf7-4516-a8da-0e40d1737366" bam="600" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="600.00">
+                                            <span>600.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="1.55">
+                                            <span class="coef">1.55</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="930.00">
+                                            <span class="won-amount">930.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="3c9daafd-32f8-42cd-a520-95078c9d42f4" bam="50" class="tb-row win ">
+                                        <div class="col-1" title="f***3">
+                                            <span>f***3</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="50.00">
+                                            <span>50.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="20.00">
+                                            <span class="coef">20.00</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="1000.00">
+                                            <span class="won-amount">1000.00</span>
+                                        </div>
+                                        <div style="col-5" title="USD">
+                                            <span class="currency">&nbsp;USD</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="4eb8ceb1-2e13-41b0-9467-2711a4f7b748" bam="1000" class="tb-row win ">
+                                        <div class="col-1" title="f***3">
+                                            <span>f***3</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="1000.00">
+                                            <span>1000.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="1.00">
+                                            <span class="coef">1.00</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="1000.00">
+                                            <span class="won-amount">1000.00</span>
+                                        </div>
+                                        <div style="col-5" title="USD">
+                                            <span class="currency">&nbsp;USD</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="ba1a22df-058e-4920-8963-7efa6b5566f0" bam="50" class="tb-row win ">
+                                        <div class="col-1" title="a***z">
+                                            <span>a***z</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="50.00">
+                                            <span>50.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="18.57">
+                                            <span class="coef">18.57</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="928.50">
+                                            <span class="won-amount">928.50</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="c39f6187-4d03-4fec-b6ab-78ef046b8f36" bam="80" class="tb-row win ">
+                                        <div class="col-1" title="h***a">
+                                            <span>h***a</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="80.00">
+                                            <span>80.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="11.46">
+                                            <span class="coef">11.46</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="916.80">
+                                            <span class="won-amount">916.80</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="8d8f506c-94cc-4f66-86e1-3ce5c91bfd7a" bam="400" class="tb-row win ">
+                                        <div class="col-1" title="h***a">
+                                            <span>h***a</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="400.00">
+                                            <span>400.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="2.20">
+                                            <span class="coef">2.20</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="880.00">
+                                            <span class="won-amount">880.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="58b430c4-def8-4464-bb96-427515267c4e" bam="300" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="300.00">
+                                            <span>300.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="2.87">
+                                            <span class="coef">2.87</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="861.00">
+                                            <span class="won-amount">861.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="f368c34e-f97d-4f28-a7d0-08f9e2e576f9" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="1.25">
+                                            <span class="coef">1.25</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="625.00">
+                                            <span class="won-amount">625.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+
+                                    <div bid="c7e3baf7-b0cf-415e-996c-30f3866ce14b" bam="500" class="tb-row win ">
+                                        <div class="col-1" title="s***0">
+                                            <span>s***0</span>
+                                        </div>
+                                        <div class="col-2 num-td" title="500.00">
+                                            <span>500.00</span>
+                                        </div>
+                                        <div class="col-3 num-td" title="1.25">
+                                            <span class="coef">1.25</span>
+                                        </div>
+                                        <div class="col-4 num-td win-td won-bet" title="625.00">
+                                            <span class="won-amount">625.00</span>
+                                        </div>
+                                        <div style="col-5" title="EUR">
+                                            <span class="currency">&nbsp;EUR</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="live-chat right-section">
+                <div class="section-header chat-header">
+                    <div class="icon-title"><span class="material-icons">chat</span> <span class="section-title"
+                            data-trans="common__chat">Chat</span></div>
+                    <div class="exp-col"><img src="static/images/show-hide-chat.svg" alt=""></div>
+                </div>
+                <div class="section-body">
+                    <div class="chat-message-container">
+                        <ul class="chat-container">
+                            <li class="message-container">
+                                <span class="sender-name">f***3: </span>
+                                <span class="message">Hola</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">c***2: </span>
+                                <span class="message">Qui est chaud à Chicken ?</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">c***2: </span>
+                                <span class="message">Des conseils pour coffrer facilement ?</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">o***e: </span>
+                                <span class="message">asd</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">t***n: </span>
+                                <span class="message">Scam</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">k***1: </span>
+                                <span class="message">presne je to scam idem do Packety</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">a***u: </span>
+                                <span class="message">please i need 1 dollar </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">a***u: </span>
+                                <span class="message">please i need 1 dollar </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">a***u: </span>
+                                <span class="message">please i need 1 dollar </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">a***u: </span>
+                                <span class="message">please i need 1 dollar </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">a***u: </span>
+                                <span class="message">please i need 1 dollar </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">a***u: </span>
+                                <span class="message">please i need 1 dollar </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">l***y: </span>
+                                <span class="message">1 dolar please</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">s***4: </span>
+                                <span class="message">give me money please, my paypal is @Sebassq</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">m***a: </span>
+                                <span class="message">let </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">m***a: </span>
+                                <span class="message">uuuuuii</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">m***h: </span>
+                                <span class="message">hi</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">s***a: </span>
+                                <span class="message">hi</span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">s***a: </span>
+                                <span class="message">how can game </span>
+                            </li>
+                            <li class="message-container">
+                                <span class="sender-name">m***1: </span>
+                                <span class="message">bella raga! l'italiano sbanca ogni 30min</span>
+                            </li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div class="game-state-info">
-                <div class="count-container bone-count">
-                    <div class="counter">
-                        <div id="leftBoneCount" class="value">5</div>
-                        <div class="separator">x</div>
-                        <div class="icon"></div>
+                    <div class="chat-message">
+                        <form><textarea name="new-message" data-trans="common__type_message"
+                                data-trans-attr="placeholder" placeholder="Type message..." autocomplete="off"
+                                maxlength="60"></textarea> <button type="submit" class="send-message"><img
+                                    src="static/images/send-message.png" alt=""></button></form>
                     </div>
                 </div>
-                <div class="count-container chicken-count">
-                    <div class="counter">
-                        <div id="leftChickenCount" class="value">20</div>
-                        <div class="separator">x</div>
-                        <div class="icon"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="web-profit-wrapper">
-                <div class="profit-container">
-                    <div class="profit-box next-profit">
-                        <div class="profit-wrapper"><span class="title" data-trans="chicken_nextWin">Next Tile
-                                Win</span>
-                            <div class="profit-content"><span class="profit-coef"></span> <span
-                                    class="profit-amount"></span></div>
-                        </div>
-                    </div>
-                    <div class="profit-box total-profit">
-                        <div class="profit-wrapper"><span class="title" data-trans="chicken__totalWin">Total Win</span>
-                            <div class="profit-content"><span class="profit-coef"></span> <span
-                                    class="profit-amount"></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="betslip">
-            <div id="bet-settings">
-                <div class="bet-setting">
-                    <div class="wrapper-left">
-                        <div class="bet-wrapper bet-wrapper-with-overlay amount-box">
-                            <div class="input-wrapper">
-                                <div class="title-wrapper"><span class="title" data-trans="common__bet">Bet</span> <span
-                                        class="title custom-title" data-trans="custom__bet">Coin value</span></div>
-                                <div class="input-amount with-overlay"><input type="number" step="0.01"
-                                        name="bet-amount" placeholder="Amount" value="5.00">
-                                    <div class="input-overlay">
-                                        <div class="input-val">5.00</div>
-                                        <div class="input-val-ending">EUR</div>
-                                    </div>
-                                    <div class="input-btn minus"></div>
-                                    <div class="input-btn plus"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bones-wrapper amount-box">
-                            <div class="input-wrapper"><span class="title" data-trans="chicken__bones">Bones</span>
-                                <div class="input-amount">
-                                    <div class="input-btn minus"></div><input type="number" step="1" name="bone-count"
-                                        placeholder="1-24" min="1" max="24" value="5">
-                                    <div class="input-btn plus"></div>
-                                </div>
-                            </div>
-                            <div id="initialMultiplierLabel" class="initial-multiplier-wrapper" style="display: flex;">
-                                <div class="label" data-trans="chicken__initial_multiplier">Initial multiplier</div>
-                                <div style="margin: 0 3px;">(</div>
-                                <div class="amount">1.23</div>
-                                <div style="margin: 0 3px;">x )</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wrapper-buttons">
-                        <div class="error-wrapper">
-                            <div class="error"></div>
-                        </div><button class="bet-button" style="">
-                            <div class="title-container"><span data-trans="common__bet">Bet</span>
-                                <div class="btn-amount-wrapper"><b class="value"></b> <b class="currency"
-                                        dynamic-currency="">EUR</b></div>
-                            </div>
-                            <div class="bars-loader"></div>
-                        </button> <button class="cashout-button" disabled="" style="display: none;"><span
-                                data-trans="common__cashout">Cashout</span>
-                            <div class="button-cashout-wrapper"><span class="button-cashout-amount"></span> <span
-                                    class="button-cashout-currency"></span></div>
-                            <div class="bars-loader"></div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="mobile-profit-wrapper">
-                <div class="profit-container">
-                    <div class="profit-box next-profit">
-                        <div class="profit-wrapper"><span class="title" data-trans="chicken_nextWin">Next Tile
-                                Win</span>
-                            <div class="profit-content"><span class="profit-coef"></span> <span
-                                    class="profit-amount"></span></div>
-                        </div>
-                    </div>
-                    <div class="profit-box total-profit">
-                        <div class="profit-wrapper"><span class="title" data-trans="chicken__totalWin">Total Win</span>
-                            <div class="profit-content"><span class="profit-coef"></span> <span
-                                    class="profit-amount"></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="bet-info-wrapper">
-            <div class="bet-limits">
-                <div class="limit-item">
-                    <div class="text"><span data-trans="common__min_bet">Min Bet</span>:</div>
-                    <div class="number bet-limit-min">0.20 <b>EUR</b></div>
-                </div>
-                <div class="limit-item">
-                    <div class="text"><span data-trans="common__max_bet">Max Bet</span>:</div>
-                    <div class="number bet-limit-max">1000.00 <b>EUR</b></div>
-                </div>
-                <div class="limit-item">
-                    <div class="text"><span data-trans="common__max_profit">Max Profit</span>:</div>
-                    <div class="number bet-limit-max-profit">10000.00 <b>EUR</b></div>
-                </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
+    </main>
 </body>
 
 </html>
+
+<script src="../chicken/main.js"></script>
