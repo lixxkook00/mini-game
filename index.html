@@ -5,74 +5,312 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Rich</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/footer-logo.png">
+    <title>Be Rich Game</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/fontawesome-6.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/utils.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!-- meta -->
+    <meta name="title" content="Hetery" />
+    <meta name="author" content="Hetery" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Hetery">
+    <meta name="robots" content="index,follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hetery" />
+    <meta property="og:image" content="./assets/images/about-thumnail.png">
+    <meta property="og:description" content="Hetery">
+
+    <!-- <meta property="og:image" content="./assets/images/ic-website.png" /> -->
 </head>
 
 <body>
-    <div id="page-wrapper" class="gray-bg" style="min-height: 909px;">
-        <div class="wrapper wrapper-content animated fadeInRight" style="padding-bottom: 140px;">
-            <div class="row">
-                <div class="col-lg-12" id="Content">
-                    <link href="https://www.fundist.org/static20230601.295/funtheme_inspinia//css/lobby.css"
-                        rel="stylesheet">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul id="MerchantNav" class="breadcrumb">
-                                <li class="">
-                                    <a href="" title="Game Providers">Be Rich</a>
-                                </li>
-                                <li class="active">
-                                    <strong id="MerchantName">Mini Game</strong>
-                                </li>
-                            </ul>
+    <!-- HEADER MOBILE -->
+    <div class="header-mobile hide-on-pc">
+        <a href="./index.html">
+            <img class="header-mobile-logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_GAME_Store_Iberia.png" alt="">
+        </a>
+        <div class="header-mobile-left">
+            <div class="header-mobile-icon centering" onclick="toggleNavMobile()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV MOBILE -->
+    <div class="soft-menu" onclick="toggleNavMobile()">
+        <ul class="soft-menu__list" onclick="{(e) => e.stopPropagation();}">
+            <li class="soft-menu__item soft-menu__item--active">
+                <a class="" href="#about">
+                    <i class="fa-solid fa-house"></i> Giới thiệu
+                </a>
+            </li>
+            <li class="soft-menu__item soft-menu__item-sub">
+                <a class="" href="./deposit.html">
+                    <i class="fa-sharp fa-solid fa-money-bill-1-wave"></i> Nạp tiền
+                </a>
+            </li>
+
+            <li class="soft-menu__item soft-menu__item-sub">
+                <a class="" href="./withdraw.html">
+                    <i class="fa-sharp fa-solid fa-money-bill-transfer"></i> Rút tiền
+                </a>
+            </li>
+
+            <div class="soft-menu__item soft-menu__item-sub">
+                <a class="ref-link" href="./register.html">
+                    <i class="fa-solid fa-user-plus"></i> Đăng ký
+                </a>
+            </div>
+
+            <div class="soft-menu__item soft-menu__item-sub">
+                <a class="ref-link" href="./login.html">
+                    <i class="fa-solid fa-right-to-bracket"></i> Đăng nhập
+                </a>
+            </div>
+        </ul>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header hidden-m-t">
+        <div class="header-wrapper align-items-center d-flex justify-content-between">
+            <a href="/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_GAME_Store_Iberia.png" alt=""
+                    class="header-logo">
+            </a>
+
+            <div class="header-nav d-flex">
+                <a href="./deposit.html" class="header-nav-item centering">
+                    Nạp tiền
+                </a>
+                <!-- <a href="#product" class="header-nav-item centering">
+                    sản phẩm
+                </a> -->
+                <a href="./withdraw.html" class="header-nav-item centering">
+                    Rút tiền
+                </a>
+
+                <a href="./register.html" class="primary-button second">
+                    Đăng ký
+                </a>
+                <a href="./login.html" class="primary-button">
+                    Đăng nhập
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- GAME MENU -->
+    <div class="menu">
+        <div class="container">
+            <div class="overflow-scoll">
+                <div class="menu-wrapper d-flex align-items-center">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-house"></i>
+                        <div class="d-flex">
+                            TRANG CHỦ
                         </div>
-                        <div class="col-md-4">
-                            <input id="filter" type="text" class="form-control input-sm" placeholder="Quick filter"
-                                value="">
-                        </div>
-                        <div class="col-md-2"></div>
                     </div>
-                    <div id="mainLinks" align="left">
-
-                        <div class="tag-item ibox float-e-margins">
-                            <div class="ibox-content">
-                                <div class="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <a href="./dinosaur/index.html">
-                                                <img src="./assets/images/Dino.jpg" alt="Dino">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ibox-title">
-                                <p class="tag-title">Dinosaur</p>
-                            </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-burst"></i>
+                        <div class="d-flex">
+                            NỔ HỦ
                         </div>
-
-                        <div class="tag-item ibox float-e-margins">
-                            <div class="ibox-content">
-                                <div class="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <a href="./chicken/index.html">
-                                                <img src="./assets/images/Chicken.jpg" alt="Dino">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ibox-title">
-                                <p class="tag-title">Chicken</p>
-                            </div>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-dice"></i>
+                        <div class="d-flex">
+                            SÒNG BÀI
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-burst"></i>
+                        <div class="d-flex">
+                            NỔ HỦ
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- GAME LIST -->
+    <div class="games">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <a href="./dinosaur/index.html" class="games-item">
+                        <div class="games-item-img">
+                            <img src="./assets/images/Dino.jpg" alt="">
+                        </div>
+                        <div class="games-item-name">
+                            Dinosaurus
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <a href="./chicken/index.html" class="games-item">
+                        <div class="games-item-img">
+                            <img src="./assets/images/Chicken.jpg" alt="">
+                        </div>
+                        <div class="games-item-name">
+                            Chicken
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <a href="https://noel-island.vercel.app/lucky-wheel" class="games-item">
+                        <div class="games-item-img">
+                            <img src="./assets/images/lucky-wheel.png" alt="">
+                        </div>
+                        <div class="games-item-name">
+                            Lucky Wheel
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer padding-block hidden-m-t">
+        <div class="container">
+            <div class="grid grid-2 grid-m-1">
+                <div class="d-flex align-items-center">
+                    <img class="footer-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_GAME_Store_Iberia.png" alt="">
+
+                    <div class="d-flex justify-content-start flex-column">
+                        <div class="d-flex">
+                            <a href="">Facebook</a>
+
+                            <a href="">Twitter</a>
+
+                            <a href="">Instagram</a>
+                        </div>
+                        <p class="mt-3">© 2023 by BeRich Minigame</p>
+                    </div>
+                </div>
+
+                <div class="centering w-100 mail">
+                    <div class="d-flex flex-column w-100">
+                        <div class="footer-input d-flex align-items-center">
+                            <div class="footer-input-name">
+                                Newsletter
+                            </div>
+
+                            <div class="footer-input-content d-flex align-items-center">
+                                <input type="text" placeholder="Enter your email address here">
+                                <div class="footer-input-btn">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-3 justify-content-end">
+                            <a href="">Shipping</a>
+
+                            <a href="">Privacy Policy</a>
+
+                            <a href="">Support</a>
+
+                            <a href="">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav hide-on-pc">
+        <a href="./index.html" class="bottom-nav-item active">
+            <div class="bottom-nav-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="bottom-nav-name">
+                Trang chủ
+            </div>
+        </a>
+        <a href="" class="bottom-nav-item">
+            <div class="bottom-nav-icon">
+                <i class="fa-solid fa-gift"></i>
+            </div>
+            <div class="bottom-nav-name">
+                Khuyến mãi
+            </div>
+        </a>
+        <a href="" class="bottom-nav-item">
+            <div class="bottom-nav-icon">
+                <i class="fa-solid fa-headphones"></i>
+            </div>
+            <div class="bottom-nav-name">
+                CSKH 24/7
+            </div>
+        </a>
+        <a href="./login.html" class="bottom-nav-item">
+            <div class="bottom-nav-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="bottom-nav-name">
+                Đăng nhập
+            </div>
+        </a>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading" class="loading centering">
+        <div class="loadingio-spinner-eclipse-2wq14xvvzww">
+            <div class="ldio-7p9hfcd676n">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCROLL TO TOP -->
+    <div class="scroll-to-top">
+        <i class="fa-solid fa-comments-dollar"></i>
+    </div>
+
 </body>
 
 </html>
+
+<script src="./assets/js/swiper-bundle.min.js"></script>
+
+<script src="./assets/js/wow.min.js"></script>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="./assets/js/main.js"></script>
+
+<script>
+    /*  
+           INIT WOWJS
+        */
+    wow = new WOW({
+        boxClass: "wow", // default
+        animateClass: "animated", // default
+        offset: 0, // default
+        mobile: true, // default
+        live: true, // default
+    });
+    wow.init();
+</script>

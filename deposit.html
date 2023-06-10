@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/footer-logo.png">
+    <title>Be Rich Game</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/adminlte.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome-6.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/utils.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!-- meta -->
+    <meta name="title" content="Hetery" />
+    <meta name="author" content="Hetery" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Hetery">
+    <meta name="robots" content="index,follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hetery" />
+    <meta property="og:image" content="./assets/images/about-thumnail.png">
+    <meta property="og:description" content="Hetery">
+
+    <!-- <meta property="og:image" content="./assets/images/ic-website.png" /> -->
+</head>
+
+<body>
+    <!-- HEADER MOBILE -->
+    <div class="header-mobile hide-on-pc">
+        <a href="./index.html">
+            <img class="header-mobile-logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_GAME_Store_Iberia.png" alt="">
+        </a>
+        <div class="header-mobile-left">
+            <div class="header-mobile-icon centering" onclick="toggleNavMobile()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV MOBILE -->
+    <div class="soft-menu" onclick="toggleNavMobile()">
+        <ul class="soft-menu__list" onclick="{(e) => e.stopPropagation();}">
+            <li class="soft-menu__item soft-menu__item--active">
+                <a class="" href="#about">
+                    <i class="fa-solid fa-house"></i> Giới thiệu
+                </a>
+            </li>
+            <li class="soft-menu__item soft-menu__item-sub">
+                <a class="" href="./deposit.html">
+                    <i class="fa-sharp fa-solid fa-money-bill-1-wave"></i> Nạp tiền
+                </a>
+            </li>
+
+            <li class="soft-menu__item soft-menu__item-sub">
+                <a class="" href="./withdraw.html">
+                    <i class="fa-sharp fa-solid fa-money-bill-transfer"></i> Rút tiền
+                </a>
+            </li>
+
+            <div class="soft-menu__item soft-menu__item-sub">
+                <a class="ref-link" href="./register.html">
+                    <i class="fa-solid fa-user-plus"></i> Đăng ký
+                </a>
+            </div>
+
+            <div class="soft-menu__item soft-menu__item-sub">
+                <a class="ref-link" href="./login.html">
+                    <i class="fa-solid fa-right-to-bracket"></i> Đăng nhập
+                </a>
+            </div>
+        </ul>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header hidden-m-t">
+        <div class="header-wrapper align-items-center d-flex justify-content-between">
+            <a href="/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_GAME_Store_Iberia.png" alt=""
+                    class="header-logo">
+            </a>
+
+            <div class="header-nav d-flex">
+                <a href="./deposit.html" class="header-nav-item centering active">
+                    Nạp tiền
+                </a>
+                <!-- <a href="#product" class="header-nav-item centering">
+                        sản phẩm
+                    </a> -->
+                <a href="./withdraw.html" class="header-nav-item centering">
+                    Rút tiền
+                </a>
+
+                <a href="./register.html" class="primary-button second">
+                    Đăng ký
+                </a>
+                <a href="./login.html" class="primary-button">
+                    Đăng nhập
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- GAME MENU -->
+    <div class="menu">
+        <div class="container">
+            <div class="overflow-scoll">
+                <div class="menu-wrapper d-flex align-items-center">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-house"></i>
+                        <div class="d-flex">
+                            TRANG CHỦ
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-burst"></i>
+                        <div class="d-flex">
+                            NỔ HỦ
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-dice"></i>
+                        <div class="d-flex">
+                            SÒNG BÀI
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-burst"></i>
+                        <div class="d-flex">
+                            NỔ HỦ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="user">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="user-control">
+                        <div class="user-infor">
+                            <div class="user-infor-avt">
+                                <img src="https://t4.ftcdn.net/jpg/01/68/41/93/360_F_168419369_XM588ym4hm0fKtKSZ7rjnpsCUIm5Xc3v.jpg"
+                                    alt="">
+                            </div>
+                            <div class="user-infor-name">
+                                Tài khoản : <span>bringmoneytomymom</span>
+                            </div>
+                            <div class="user-balance">
+                                Số dư : <span>0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-money d-flex align-items-center justify-content-between">
+                        <a href="./deposit.html" class="user-money-item centering active">
+                            <div class="user-money-icon">
+                                <i class="fa-sharp fa-solid fa-money-bill-1-wave"></i>
+                                <span>Nạp tiền</span>
+                            </div>
+                        </a>
+                        <a href="./withdraw.html" class="user-money-item centering ">
+                            <div class="user-money-icon">
+                                <i class="fa-sharp fa-solid fa-money-bill-transfer"></i>
+                                <span>Rút tiền</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="user-service">
+                        <div class="user-service-item">
+                            <i class="fa-solid fa-bell"></i>
+                            <span>Thông báo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="deposit user-content">
+                        <div class="row">
+
+                            <div class="col-md-6 col-lg-4 col-sm-6 col-xs-12">
+                                <div class="info-deposit card card-block card-stretch card-height rtl-mode"
+                                    style="padding: 20px; overflow-x: auto; background-image: url('/unilike/images/thenganhang.png');border-radius: 25px;color: white">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th colspan="2" class="text-center">
+                                                    <!-- <img src="/assets/img/nam-a-bank.png"
+                                                        style="height: 80px;max-width: 25%; float: left"> -->
+                                                    <h4 style="line-height: 3.2;color: #007dc4; font-size:20px; font-weight:bold;"
+                                                        langkey="transfer_information">NGÂN HÀNG NAM Á</h4>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>Ngân hàng:</td>
+                                                <td class="text-right copy" text="NAM A BANK">NAM A BANK &nbsp; <i
+                                                        class="fa fa-clone"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Chi nhánh:</td>
+                                                <td class="text-right copy" text="Ho Chi Minh">Ho Chi Minh &nbsp; <i
+                                                        class="fa fa-clone"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Chủ tài khoản:</td>
+                                                <td class="text-right copy" text="DAM TO UYEN">MONEY MONEY &nbsp; <i
+                                                        class="fa fa-clone"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Số tài khoản:</td>
+                                                <td class="text-right"><b class="copy" text="686868686">686868686 &nbsp;
+                                                        <i class="fa fa-clone"></i></b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ghi chú:</td>
+                                                <td class="text-right"><b style="color: #f74e4e" class="copy"
+                                                        text="MM6789">MM6789
+                                                        &nbsp; <i class="fa fa-clone"></i></b></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-8 col-sm-6 col-xs-12">
+                                <div class="col-xs-6 col-sm-12">
+                                    <div class="info-deposit card card-block card-stretch card-height rtl-mode"
+                                        style="padding: 20px; overflow-x: auto; background: linear-gradient(0deg, #e9009f 0%, #fa40bf 100%);border-radius: 25px;color: white">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-6 col-xs-12"
+                                                style="text-align: center;margin: auto;">
+                                                <img src="https://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=00020101021238530010A0000007270123000697042801098886879680208QRIBFTTA53037045802VN62140810UN00499781630477F3"
+                                                    style="width: 185px; max-width: 100%; margin-bottom: 10px; margin: auto; margin-bottom: 0; margin-top: 0;">
+                                                <p style="font-size: 14px;text-align: center;margin-top: 10px;"
+                                                    class="font-weight-bold">QUÉT MÃ
+                                                    QR ĐỂ CHUYỂN TIỀN</p>
+                                            </div>
+                                            <div class="col-lg-10 col-md-6 col-xs-12">
+                                                <h3 class="title-name text-center"><i class="fa fa-exclamation-triangle"
+                                                        style="color:orange"></i> <b langkey="caution">Lưu ý</b></h3>
+                                                <div class="gaps-1x"></div>
+                                                <ul class="content-note" style="padding-left: 20px;">
+                                                    <li><span>Bạn có thể thêm xu dựa theo số Xu bạn mong muốn.</span>
+                                                    </li>
+                                                    <li><span>Hãy kiểm tra kỹ trước khi thêm xu. Xu của bạn sẽ chỉ được
+                                                            dùng để sử dụng dịch vụ,
+                                                            không được quy đổi, rút hoặc chuyển.</span></li>
+                                                    <li><span>Vui lòng ghi rõ nội dung (Phần ghi chú).</span></li>
+                                                    <li><span>Ghi chú chuyển chỉ được sử dụng một lần.</span></li>
+                                                    <li><span>Số dư của bạn sẽ tự động cập nhật khi hệ thống ngân hàng
+                                                            xác nhận.</span></li>
+                                                    <li><span>Nếu bạn đang chuyển từ Ngân hàng khác, quá trình xác nhận
+                                                            có thể mất 24
+                                                            giờ.</span></li>
+                                                    <li><span>Nếu bạn chưa được cập nhật xu, vui lòng liên hệ hỗ trợ
+                                                            trên website.</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-12 col-sm-6 col-xs-12">
+                                <hr>
+                                <h3 class="font-weight-bold">Lịch sử giao dịch</h3>
+                                <div class="card" style="overflow-x: auto; border: 1px solid #d1d3d5">
+                                    <table class="table history-table">
+                                        <thead>
+                                            <tr class="data-item data-head">
+                                                <th class="data-col" langkey="time">Thời gian</th>
+                                                <th class="data-col" langkey="code">Mã</th>
+                                                <th class="data-col" langkey="sender_receiver">Người gửi / Người nhận
+                                                </th>
+                                                <th class="data-col text-right"><span langkey="amount">Số tiền</span>
+                                                    &nbsp; </th>
+                                                <th class="data-col" langkey="wallet">Ví</th>
+                                                <th class="data-col text-center" langkey="status">Trạng thái</th>
+                                                <th class="data-col" langkey="type">Loại</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="10" class="text-center">Chưa có dữ liệu</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer padding-block hidden-m-t">
+        <div class="container">
+            <div class="grid grid-2 grid-m-1">
+                <div class="d-flex align-items-center">
+                    <img class="footer-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_GAME_Store_Iberia.png" alt="">
+
+                    <div class="d-flex justify-content-start flex-column">
+                        <div class="d-flex">
+                            <a href="">Facebook</a>
+
+                            <a href="">Twitter</a>
+
+                            <a href="">Instagram</a>
+                        </div>
+                        <p class="mt-3">© 2023 by BeRich Minigame</p>
+                    </div>
+                </div>
+
+                <div class="centering w-100 mail">
+                    <div class="d-flex flex-column w-100">
+                        <div class="footer-input d-flex align-items-center">
+                            <div class="footer-input-name">
+                                Newsletter
+                            </div>
+
+                            <div class="footer-input-content d-flex align-items-center">
+                                <input type="text" placeholder="Enter your email address here">
+                                <div class="footer-input-btn">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-3 justify-content-end">
+                            <a href="">Shipping</a>
+
+                            <a href="">Privacy Policy</a>
+
+                            <a href="">Support</a>
+
+                            <a href="">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav hide-on-pc">
+        <a href="./index.html" class="bottom-nav-item active">
+            <div class="bottom-nav-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="bottom-nav-name">
+                Trang chủ
+            </div>
+        </a>
+        <a href="" class="bottom-nav-item">
+            <div class="bottom-nav-icon">
+                <i class="fa-solid fa-gift"></i>
+            </div>
+            <div class="bottom-nav-name">
+                Khuyến mãi
+            </div>
+        </a>
+        <a href="" class="bottom-nav-item">
+            <div class="bottom-nav-icon">
+                <i class="fa-solid fa-headphones"></i>
+            </div>
+            <div class="bottom-nav-name">
+                CSKH 24/7
+            </div>
+        </a>
+        <a href="./login.html" class="bottom-nav-item">
+            <div class="bottom-nav-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="bottom-nav-name">
+                Đăng nhập
+            </div>
+        </a>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading" class="loading centering">
+        <div class="loadingio-spinner-eclipse-2wq14xvvzww">
+            <div class="ldio-7p9hfcd676n">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCROLL TO TOP -->
+    <div class="scroll-to-top">
+        <i class="fa-solid fa-comments-dollar"></i>
+    </div>
+
+</body>
+
+</html>
+
+<script src="./assets/js/swiper-bundle.min.js"></script>
+
+<script src="./assets/js/wow.min.js"></script>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="./assets/js/main.js"></script>
+
+<script>
+    /*  
+           INIT WOWJS
+        */
+    wow = new WOW({
+        boxClass: "wow", // default
+        animateClass: "animated", // default
+        offset: 0, // default
+        mobile: true, // default
+        live: true, // default
+    });
+    wow.init();
+</script>
