@@ -6,10 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Game | Chicken</title>
+    <link rel="stylesheet" href="../assets/css/fontawesome-6.1/css/all.min.css">
     <link rel="stylesheet" href="../chicken/style.css">
 </head>
 
 <body>
+    <div class="header-wrapper">
+        <header>
+            <div class="wrapper">
+                <div class="main-content">
+                    <a href="../index.html" class="back-button">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <div id="game-name">Chicken</div>
+                    <div id="user-state">
+                        <div id="freebet-wrapper">
+                            <div id="wallet-freebet" style="display: none;"><span data-trans="common__freebets">FREEBETS</span> <i class="freebet animate-flicker">0</i>
+                            </div>
+                        </div>
+                        <div class="wallet-wrapper single">
+                            <div id="active-wallet"><b>VNĐ</b> <span>10.690.000,00</span></div>
+                            <div id="user-wallets">
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-settings-wrapper">
+                        <div class="game-time-wrapper">
+                            <div id="game-time">00:10:59</div>
+                        </div>
+                        <div id="game-rules">
+                            <div id="game-audio-controllers" class="game-audio-controllers">
+                                <div id="background-audio-controller" class="game-audio-controller"><span data-trans="common__sound_background_toggle">Background Music</span>
+                                    <div class="switch-button"><span class="inner-switch-button"></span><span class="inner-switch-button-text"></span></div>
+                                </div>
+                                <div id="game-audio-controller" class="game-audio-controller"><span data-trans="common__sound_game_toggle">Game Sounds</span>
+                                    <div class="switch-button"><span class="inner-switch-button"></span><span class="inner-switch-button-text"></span></div>
+                                </div>
+                            </div>
+                            <div class="volume muted"><img class="sound-on" src="../dinosaur/static/images/volume-on.svg" alt="">
+                                <img class="sound-off" src="../dinosaur/static/images/volume-off.svg" alt="">
+                            </div>
+                            <div id="rules-wrapper"><a class="link"><img src="../dinosaur/static/images/rules-icon.svg" alt="">
+                                    <span class="title" data-trans="common__game_rules">Game Rules</span></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="volume muted"><span class="material-icons sound-on">volume_up</span> <span class="material-icons sound-off">volume_off</span></div>
+                    <div class="menu-burger">
+                        <div class="bar bar--long"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
     <main>
         <div class="left-content">
             <div class="full-loader">

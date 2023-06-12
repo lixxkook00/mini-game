@@ -309,7 +309,7 @@ header .wrapper .main-content .back-to-home {
 }
 
 header .wrapper .main-content #game-name {
-    color: var(--gameNameColor);
+    color: #B01F81;
     font-size: 38px;
     display: flex;
     align-items: center;
@@ -4129,4 +4129,10 @@ main .right-section.my-bets .section-body .my-bets-body .bet-list {
         height: 90px;
         margin-bottom: 5px
     }
+}
+
+
+.back-button{
+    color: #B01F81;
+    font-size: 30px;
 }
