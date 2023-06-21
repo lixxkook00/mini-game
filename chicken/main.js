@@ -32,6 +32,7 @@ const handleFakeOpen = (plate) => {
 const randomPlatesLeft = () => {
     plateList.forEach((plate, index) => {
         if(!openedPlate.includes(index)){
+            plate.removeEventListener('click', plate.onclick)
             handleFakeOpen(plate)
         }
     })
@@ -49,7 +50,7 @@ const handleOpenPlate = (plate, index) => {
         plate.classList.add('bone')
         setTimeout(() => {
             randomPlatesLeft()
-        }, 1500)
+        }, 0)
     }
 
     console.log(openedPlate)
